@@ -1,6 +1,6 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import Header from './Header'
 import Main from './Main'
@@ -16,6 +16,7 @@ const App = () => {
             <BrowserRouter>
                 <Header />
                     <Switch>
+                        <Redirect from='/home' to='/' />
                         <Route path='/contact'>
                             <Contact />
                         </Route>

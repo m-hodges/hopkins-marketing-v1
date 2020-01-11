@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Navbar from 'react-bootstrap/Navbar'
+
 const Nav = () => {
     return (
-        <div>
-            This is the nav bar
-        </div>
+        <Navbar bg='light' expand='lg'>
+            <Navbar.Brand href='/'>Hopkins Marketing Group</Navbar.Brand>
+        </Navbar>
     );
 };
 

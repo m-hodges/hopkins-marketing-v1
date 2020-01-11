@@ -4,9 +4,6 @@ import { hot } from 'react-hot-loader'
 const App = () => {
     return (
         <>
-            <div className='example'>
-                Welcome to the react-typescript-sass boilerplate
-            </div>
         </>
     )
 }

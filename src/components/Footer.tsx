@@ -2,36 +2,30 @@ import React from 'react';
 
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import FacebookIcon from '@material-ui/icons/Facebook'
 
 
 const Footer = () => {
     return (
-        <Navbar bg='light' fixed='bottom' className='footer'>
+        <Navbar bg='dark' fixed='bottom' className='footer'>
             <Container>
             <Row>
-                <Col></Col>
+                <Col>
+                    <FacebookIcon />
+                </Col>
                 <Col>
                     <NavLink to='/home'>
                         Home
                     </NavLink>
                 </Col>
                 <Col>
-                    <Nav>
-                        <Nav.Item>
-                            <Nav.Link>
-                                <NavLink to='/home'>
-                                    Home
-                                </NavLink>
-                            </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link>
-                                <NavLink to='/home'>
-                                    Contact
-                                </NavLink>
-                            </Nav.Link>
-                        </Nav.Item>
-                    </Nav>
+                    <NavLink to='/home'>
+                        Home
+                    </NavLink>
+        
+                    <NavLink to='/home'>
+                        Contact
+                    </NavLink>        
                 </Col>
             </Row>
             </Container>

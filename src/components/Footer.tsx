@@ -9,19 +9,19 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 const Footer = () => {
     return (
         <Navbar bg='dark' fixed='bottom' className='footer'>
-            <Container fluid>
+            <Container fluid className='footer--container'>
                 <Row>
-                    <Col>
+                    <Col md={4}>
                         <FacebookIcon />
                         <TwitterIcon />
                         <InstagramIcon />
                     </Col>
-                    <Col>
+                    <Col md={4}>
                         <NavLink to='/home'>
                             Home
                         </NavLink>
                     </Col>
-                    <Col>
+                    <Col md={4}>
                         <NavLink to='/home'>
                             Home
                         </NavLink>

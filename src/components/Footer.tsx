@@ -25,12 +25,9 @@ const Footer = () => {
                     </a>
                 </Col>
                 <Col sm={3} className='footer--column'>
-                    <NavLink to='/home' className='footer--link'>
-                        Home
-                    </NavLink>
-                    <NavLink to='/contact' className='footer--link'>
-                        Contact Us
-                    </NavLink>
+                    <p>Contact</p>
+                    <p>Ph: 027312313123</p>
+                    <p>Email: hopkinsmarketing@gmail.com</p>
                 </Col>
             </Row>
             <Row className='footer--row__sub'>

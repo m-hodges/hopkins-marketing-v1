@@ -18,6 +18,9 @@
         &__centered {
             align-items: center;
         }
+        & p {
+            margin: 0px;
+        }
     }
     &--link {
         color: white;

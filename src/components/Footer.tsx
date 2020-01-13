@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap'
+import { Navbar, Container, Row, Col } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import TwitterIcon from '@material-ui/icons/Twitter'
@@ -12,7 +12,7 @@ const Footer = () => {
             <Container fluid className='footer--container'>
                 <Row className='footer--container__row'>
                     <Col sm={12} md={4} className='footer--container__column'>
-                        <img src="/images/hopkins_marketing_logo.png" alt="Hopkins Marketing Logo" />
+                        <img src="/images/hopkins_marketing_logo.jpg" alt="Hopkins Marketing Logo" className='footer--image' />
                     </Col>
                     <Col sm={6} md={4} className='footer--container__column'>
                         <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>

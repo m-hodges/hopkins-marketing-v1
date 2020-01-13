@@ -10,26 +10,26 @@ const Footer = () => {
     return (
         <Navbar bg='dark' fixed='bottom' className='footer'>
             <Container fluid className='footer--container'>
-                <Row>
+                <Row className='footer--container__row'>
                     <Col sm={12} md={4} className='footer--container__column'>
                         <img src="/images/hopkins_marketing_logo.png" alt="Hopkins Marketing Logo" />
                     </Col>
                     <Col sm={6} md={4} className='footer--container__column'>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
                             <FacebookIcon className='footer--icon'/>
                         </a>  
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
                             <TwitterIcon className='footer--icon'/>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
                             <InstagramIcon className='footer--icon'/>
                         </a>
                     </Col>
                     <Col sm={6} md={4} className='footer--container__column'>
-                        <NavLink to='/home'>
+                        <NavLink to='/home' className='footer--link'>
                             Home
                         </NavLink>
-                        <NavLink to='/contact'>
+                        <NavLink to='/contact' className='footer--link'>
                             Contact Us
                         </NavLink>
                     </Col>

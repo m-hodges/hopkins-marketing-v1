@@ -11,23 +11,27 @@ const Footer = () => {
         <Navbar bg='dark' fixed='bottom' className='footer'>
             <Container fluid className='footer--container'>
                 <Row>
-                    <Col md={4}>
-                        <FacebookIcon />
-                        <TwitterIcon />
-                        <InstagramIcon />
+                    <Col sm={12} md={4} className='footer--container__column'>
+                        <img src="/images/hopkins_marketing_logo.png" alt="Hopkins Marketing Logo" />
                     </Col>
-                    <Col md={4}>
+                    <Col sm={6} md={4} className='footer--container__column'>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <FacebookIcon className='footer--icon'/>
+                        </a>  
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <TwitterIcon className='footer--icon'/>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            <InstagramIcon className='footer--icon'/>
+                        </a>
+                    </Col>
+                    <Col sm={6} md={4} className='footer--container__column'>
                         <NavLink to='/home'>
                             Home
                         </NavLink>
-                    </Col>
-                    <Col md={4}>
-                        <NavLink to='/home'>
-                            Home
+                        <NavLink to='/contact'>
+                            Contact Us
                         </NavLink>
-                        <NavLink to='/home'>
-                            Contact
-                        </NavLink>        
                     </Col>
                 </Row>
             </Container>

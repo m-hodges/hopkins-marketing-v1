@@ -2,5 +2,9 @@
     height: 20vh;
     &--container {
         height: 100%;
+        &__column {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }

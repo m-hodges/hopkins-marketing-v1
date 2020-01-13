@@ -1,15 +1,22 @@
 .footer {
-    height: 20vh;
-    
-    &--container {
-        height: 100%;
-        &__row {
+    background-color: black;
+    padding: 20px;
+    &--row {
+        &__main {
+            height: 75%;   
         }
-        &__column {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-left: 1px solid rgba($color: #FFFFFF, $alpha: 0.5);
+        &__sub {
+            height: 25%;
+            margin-top: 20px;
+        }
+    }
+    &--column {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: white;
+        &__centered {
+            align-items: center;
         }
     }
     &--link {

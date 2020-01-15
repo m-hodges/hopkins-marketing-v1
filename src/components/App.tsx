@@ -16,7 +16,6 @@ const App = () => {
             <HashRouter>
                 <Header />
                     <Switch>
-                        <Redirect from='/home' to='/' />
                         <Route path='/contact'>
                             <Contact />
                         </Route>

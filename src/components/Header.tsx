@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const Header = () => {
     return (
         <>
-            <Navbar expand='sm' className='header'>
+            <Navbar expand='sm' className='header' fixed='top'>
                 <Navbar.Brand href='/'>Hopkins Marketing Group</Navbar.Brand>
                 <Nav activeKey='/home' className='header--links'>
                     <Nav.Item>

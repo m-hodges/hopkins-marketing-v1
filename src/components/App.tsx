@@ -1,6 +1,6 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter, Switch, Route } from 'react-router-dom'
 
 import Header from './Header'
 import Home from './Home'

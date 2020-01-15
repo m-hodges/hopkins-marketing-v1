@@ -24,7 +24,7 @@ const Footer = () => {
                     </a>
                 </Col>
                 <Col sm={3} className='footer--column'>
-                    <p>Contact</p>
+                    <p>Contact Details:</p>
                     <p>Ph: 027312313123</p>
                     <p>Email: hopkinsmarketing@gmail.com</p>
                 </Col>

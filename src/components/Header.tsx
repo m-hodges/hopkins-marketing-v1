@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom'
 const Header = () => {
     return (
         <>
-            <Navbar bg='light' expand='lg'>
+            <Navbar expand='sm' className='header'>
                 <Navbar.Brand href='/'>Hopkins Marketing Group</Navbar.Brand>
-                <Nav activeKey='/home'>
+                <Nav activeKey='/home' className='header--links'>
                     <Nav.Item>
                         <Nav.Link>
                             <NavLink to='/home' activeClassName='activeNavLink'>

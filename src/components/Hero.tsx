@@ -4,7 +4,7 @@ import { Container }  from 'react-bootstrap'
 const Hero = () => {
     return (
         <Container fluid className='hero container--centered'>
-            <h1>Hopkings Marketing Group</h1>
+            <h1>Hopkins Marketing Group</h1>
         </Container>
     );
 };

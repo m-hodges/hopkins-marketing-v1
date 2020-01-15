@@ -4,7 +4,7 @@ import { Container }  from 'react-bootstrap'
 const Home = () => {
     return (
         <Container fluid className='home container--centered'>
-            This is the main content section
+            <h1>Hopkings Marketing Group</h1>
         </Container>
     );
 };

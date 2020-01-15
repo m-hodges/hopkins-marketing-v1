@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col }  from 'react-bootstrap'
 
 import Service from './Service'
 
@@ -9,19 +8,19 @@ import { IService } from '../data'
 
 const Services = () => {
     return (
-        <Container className='services container--full'>
-            <Row>
+        <div className='services container--full'>
+            <div>
                 <h2>Our Services</h2>
-            </Row>
-            <Row>
+            </div>
+            <div>
                 {data.map((service: IService, i: number) => (
                     <Service 
                     title={service.title}
                     description={service.description}
                     key={i} />
                 ))}
-            </Row>
-        </Container>
+            </div>
+        </div>
     );
 };
 

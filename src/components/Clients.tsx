@@ -1,16 +1,15 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap'
 
 const Clients = () => {
     return (
-        <Container className='container--half'>
-            <Row>
+        <div className='container--half'>
+            <div>
                 <h2>Our Clients</h2>
-            </Row>
-            <Row>
+            </div>
+            <div>
                 <p>map through clients</p>
-            </Row>
-        </Container>
+            </div>
+        </div>
     );
 };
 

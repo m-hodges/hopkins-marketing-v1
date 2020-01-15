@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader'
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import Header from './Header'
-import Main from './Main'
+import Home from './Home'
 import About from './About'
 import Services from './Services'
 import Clients from './Clients'
@@ -30,7 +30,7 @@ const App = () => {
                             <About />
                         </Route>
                         <Route path='/'>
-                            <Main />
+                            <Home />
                         </Route>
                     </Switch>
                 <Footer />

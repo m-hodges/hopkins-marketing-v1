@@ -1,8 +1,12 @@
 .header {
-    background-color: transparent;
+    background-color: pink;
+    position: absolute;
+    width: 100vw;
+    // padding: 10px 20px 10px 20px;
+    padding-right: 100px;
     &--links {
-        // display: flex;
         color: white;
+        text-align: right;
     }
 }
 

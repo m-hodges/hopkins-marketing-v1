@@ -1,11 +1,16 @@
 import React from 'react';
-import { Container }  from 'react-bootstrap'
+
+import Hero from './Hero'
+import Mission from './Mission'
+import Services from './Services'
 
 const Home = () => {
     return (
-        <Container fluid className='home container--centered'>
-            <h1>Hopkings Marketing Group</h1>
-        </Container>
+        <>
+            <Hero />
+            <Mission />
+            <Services />
+        </>
     );
 };
 

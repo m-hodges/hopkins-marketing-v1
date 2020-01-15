@@ -3,3 +3,13 @@
     justify-content: center;
     align-items: center;
 }
+
+.container {
+    width: 100vw;
+    &--full {
+        height: 100vh;
+    }
+    &--half {
+        height: 50vh;
+    }
+}

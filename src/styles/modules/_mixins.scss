@@ -11,3 +11,10 @@
     align-items: center;
     flex-direction: $flexDirection;
 }
+
+@mixin inlineCenterFlexContainer ($flexDirection) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $flexDirection;
+}

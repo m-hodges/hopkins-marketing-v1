@@ -1,12 +1,27 @@
 .header {
-    background-color: pink;
-    position: absolute;
+    background-color: transparent;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
     width: 100vw;
-    // padding: 10px 20px 10px 20px;
+    height: 50px;
     padding-right: 100px;
-    &--links {
+    &--brand {
+        width: 30%;
+        height: 100%;
+        @include inlineCenterFlexContainer(row);
+    }
+    &--linkContainer {
+        width: 50%;
+        height: 100%;
+        @include inlineCenterFlexContainer(row);
+        justify-content: flex-end;
+        float: right;
+        padding-right: 10vw;
+    }
+    &--link {
         color: white;
-        text-align: right;
+        margin: 10px;
     }
 }
 

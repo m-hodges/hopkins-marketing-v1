@@ -5,7 +5,11 @@ import About from './About'
 import Services from './Services'
 import Clients from './Clients'
 
-const Main = ( { setHeaderVisibility } : any) => {
+type Props = {
+    setHeaderVisibility: (arg: boolean) => void;
+}
+
+const Main = ( { setHeaderVisibility } : Props) => {
     return (
         <>
             <Hero setHeaderVisibility={setHeaderVisibility} />

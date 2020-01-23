@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 
-const Hero = ( { setHeaderVisibility } : any ) => {
+type Props = {
+    setHeaderVisibility: (arg: boolean) => void;
+}
+
+const Hero = ( { setHeaderVisibility } : Props ) => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

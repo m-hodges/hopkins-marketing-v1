@@ -1,8 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-const Header = ( { isHeaderVisible } : any ) => {
+type Props = {
+    isHeaderVisible: boolean
+}
 
+const Header = ( { isHeaderVisible } : Props ) => {
     return (
         <>
             <div className='header'>

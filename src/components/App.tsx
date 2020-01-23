@@ -3,7 +3,6 @@ import { hot } from 'react-hot-loader'
 import { HashRouter, Switch, Route } from 'react-router-dom'
 
 import Header from './Header'
-import Hero from './Hero'
 import About from './About'
 import Services from './Services'
 import Clients from './Clients'
@@ -12,7 +11,7 @@ import Footer from './Footer'
 import Main from './Main'
 
 const App = () => {
-    const [ isHeaderVisible, setHeaderVisibility ] = useState(false)
+    const [ isHeaderVisible, setHeaderVisibility ] = useState<boolean>(false)
     return (
         <>
             <HashRouter>
@@ -34,6 +33,7 @@ const App = () => {
                             <Main setHeaderVisibility={setHeaderVisibility} />
                         </Route>
                 </Switch>
+            <Footer />
             </HashRouter>
         </>
     )

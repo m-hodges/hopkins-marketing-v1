@@ -15,25 +15,25 @@ const App = () => {
     return (
         <>
             <HashRouter>
-            <Header isHeaderVisible={isHeaderVisible} />
-                <Switch>
-                        <Route path='/contact'>
-                            <Contact />
-                        </Route>
-                        <Route path='/clients'>
-                            <Clients />
-                        </Route>
-                        <Route path='/services'>
-                            <Services />
-                        </Route>
-                        <Route path='/about'>
-                            <About />
-                        </Route>
-                        <Route path='/'>
-                            <Main setHeaderVisibility={setHeaderVisibility} />
-                        </Route>
-                </Switch>
-            <Footer />
+                <Header isHeaderVisible={isHeaderVisible} />
+                    <Switch>
+                            <Route path='/contact'>
+                                <Contact />
+                            </Route>
+                            <Route path='/clients'>
+                                <Clients />
+                            </Route>
+                            <Route path='/services'>
+                                <Services />
+                            </Route>
+                            <Route path='/about'>
+                                <About />
+                            </Route>
+                            <Route path='/'>
+                                <Main setHeaderVisibility={setHeaderVisibility} />
+                            </Route>
+                    </Switch>
+                <Footer />
             </HashRouter>
         </>
     )

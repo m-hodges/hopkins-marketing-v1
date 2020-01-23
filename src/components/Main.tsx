@@ -1,19 +1,19 @@
 import React from 'react';
 
 import Hero from './Hero'
-import Mission from './Mission'
+import About from './About'
 import Services from './Services'
 import Clients from './Clients'
 
-const Home = () => {
+const Main = ( { setHeaderVisibility } : any) => {
     return (
         <>
-            <Hero />
-            <Mission />
+            <Hero setHeaderVisibility={setHeaderVisibility} />
+            <About />
             <Services />
             <Clients />
         </>
     );
 };
 
-export default Home;
+export default Main;

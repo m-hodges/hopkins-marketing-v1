@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-const Header = ({ isHeaderVisible } : any) => {
-    
+const Header = ( { isHeaderVisible } : any ) => {
+
     return (
         <>
             <div className='header'>

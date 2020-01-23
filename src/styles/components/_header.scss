@@ -6,6 +6,11 @@
     width: 100vw;
     height: 50px;
     padding-right: 100px;
+    transition: background-color 0.5s ease-out;
+    &__backgroundVisible {
+        background-color: gray;
+        transition: background-color 0.5s ease-in;
+    }
     &--brand {
         width: 30%;
         height: 100%;

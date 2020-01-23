@@ -9,9 +9,9 @@ const Header = ( { isHeaderVisible } : Props ) => {
     return (
         <>
             <div className={(isHeaderVisible) ? 'header header__backgroundVisible' : 'header' }>
-                <div className='header--brand'>
-                    {isHeaderVisible &&
-                        <>
+                {isHeaderVisible &&
+                    <>
+                        <a href="#" className='header--brand'>
                             <img 
                                 src="/images/hopkins-marketing-logo.png" 
                                 alt="Hopkins Marketing Group" 
@@ -20,9 +20,9 @@ const Header = ( { isHeaderVisible } : Props ) => {
                             <span>
                                 Hopkins Marketing Group
                             </span>
-                        </>
-                    }
-                </div>
+                        </a>
+                    </>
+                }
                 <div className='header--linkContainer'>
                     <NavLink to='/' exact={true} activeClassName='activeNavLink' className='header--link'>Home</NavLink>
                     <NavLink to='/about' activeClassName='activeNavLink' className='header--link'>About</NavLink>

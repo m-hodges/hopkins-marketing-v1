@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { hot } from 'react-hot-loader'
 import { HashRouter, Switch, Route } from 'react-router-dom'
 
@@ -11,10 +11,11 @@ import Contact from './Contact'
 import Footer from './Footer'
 
 const App = () => {
+    const [ isHeaderVisible, setHeaderVisibility ] = useState(false)
     return (
         <>
             <HashRouter>
-                <Header />
+                <Header isHeaderVisible={isHeaderVisible} />
                     <Switch>
                         <Route path='/contact'>
                             <Contact />
@@ -25,7 +26,7 @@ const App = () => {
                         <Route path='/services'>
                             <Services />
                         </Route>
-                        <Route path='/about'>
+                        <Route path='/about' setHeaderVisibility={setHeaderVisibility}>
                             <About />
                         </Route>
                         <Route path='/'>

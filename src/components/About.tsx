@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const About = () => {
+const About = ( { setHeaderVisibility } : any ) => {
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    setHeaderVisibility(true)
+                }
+            })
+        })
+        const target: any = document.getElementById('headerReference')
+        observer.observe(target)
+    })
     return (
-        <div>
+        <div id='headerReference'>
             
         </div>
     );

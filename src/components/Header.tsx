@@ -1,11 +1,25 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ isHeaderVisible } : any) => {
+    
     return (
         <>
             <div className='header'>
-                <div className='header--brand'>Hopkins Marketing Group</div>
+                <div className='header--brand'>
+                    {isHeaderVisible &&
+                        <>
+                            <img 
+                                src="/images/hopkins-marketing-logo.png" 
+                                alt="Hopkins Marketing Group" 
+                                className='header--brand__logo'
+                            />
+                            <span>
+                                Hopkins Marketing Group
+                            </span>
+                        </>
+                    }
+                </div>
                 <div className='header--linkContainer'>
                     <NavLink to='/' exact={true} activeClassName='activeNavLink' className='header--link'>Home</NavLink>
                     <NavLink to='/about' activeClassName='activeNavLink' className='header--link'>About</NavLink>

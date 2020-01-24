@@ -8,8 +8,10 @@
         margin: 20px 100px;
     }
     &--hr {
+        display: inline-block;
+        margin-bottom: 20px;
         color: $primary-brand-color;
-        transition: width 1s linear;
+        transition: width 1s ease-in-out;
         &__visible {
             width: 100%;
         }

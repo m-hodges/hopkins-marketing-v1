@@ -18,7 +18,7 @@ const About = () => {
     }, [])
     return (
         <div className='about container--centered__col' >
-            <h2 id='contentReference'>
+            <h2 id='contentReference' >
                 Lorem Ipsum
                 <hr className={`about--hr ${(isHrVisible) ? 'about--hr__visible' : 'about--hr__not-visible'}`}/>
             </h2>

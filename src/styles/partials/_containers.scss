@@ -1,5 +1,6 @@
 .container {
     width: 100vw;
+    background-color: $primary-background-color;
     &--full {
         height: 100vh;
     }

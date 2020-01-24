@@ -8,13 +8,13 @@
     padding-right: 100px;
     transition: background-color 0.5s ease-out;
     &__backgroundVisible {
-        background-color: gray;
+        background-color: $secondary-background-color;
         transition: background-color 0.5s ease-in;
     }
     &--brand {
         width: 30%;
         height: 100%;
-        color: white;
+        color: $secondary-brand-color;
         @include inlineCenterFlexContainer(row);
         &__logo {
             max-width: 100%;
@@ -31,11 +31,15 @@
         padding-right: 10vw;
     }
     &--link {
-        color: white;
+        color: $secondary-brand-color;
         margin: 10px;
+        &:hover {
+            color: $primary-brand-color;
+        }
     }
 }
 
 .activeNavLink {
-    text-decoration: underline;
+    border-bottom: 1px $primary-brand-color solid;
+    color: $primary-brand-color;
 }

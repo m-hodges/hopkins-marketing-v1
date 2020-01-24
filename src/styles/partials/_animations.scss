@@ -1,0 +1,20 @@
+.fade-in {
+    opacity: 0;
+    transform: translateY(7.5vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    &--visible {
+        opacity: 1;
+        transform: translateY(0vh);
+        visibility: visible;
+    }
+}
+
+//hr scroll in from side animation
+// .scroll-in {
+//     width: 0%;
+//     transition: width 1s;
+//     &--visible {
+//         width: 100%;
+//     }
+// }

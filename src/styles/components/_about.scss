@@ -11,7 +11,7 @@
         display: inline-block;
         margin-bottom: 20px;
         color: $primary-brand-color;
-        transition: width 1s ease-in-out;
+        transition: width 1.2s ease-out;
         &__visible {
             width: 100%;
         }

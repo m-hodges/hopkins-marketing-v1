@@ -3,7 +3,7 @@ import React from 'react';
 import Service from './Service'
 
 import data from '../data'
-import { IService } from '../data'
+import IService from '../types'
 
 const Services = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IService } from '../data'
+import IService from '../types'
 
 const Service = (props: IService) => {
     return (

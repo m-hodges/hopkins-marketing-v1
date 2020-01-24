@@ -1,7 +1,4 @@
-export interface IService {
-    title: string,
-    description: string
-}
+import IService from './types'
 
 const data: IService[] = [
     {

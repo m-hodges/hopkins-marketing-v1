@@ -17,6 +17,7 @@ const Hero = ( { setHeaderVisibility } : Props ) => {
         })
         const target: any = document.querySelector('#headerReference')
         observer.observe(target)
+        return () => observer.unobserve(target)
     }, [])
     return (
         <div className='hero container--centered' id='headerReference'>

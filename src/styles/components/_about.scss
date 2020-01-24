@@ -7,4 +7,14 @@
     &--content {
         margin: 20px 100px;
     }
+    &--hr {
+        color: $primary-brand-color;
+        transition: width 1s linear;
+        &__visible {
+            width: 100%;
+        }
+        &__not-visible {
+            width: 0%;
+        }
+    }
 }

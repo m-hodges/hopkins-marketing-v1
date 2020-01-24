@@ -5,7 +5,9 @@ const About = () => {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                setContentVisibility(entry.isIntersecting)
+                if (entry.isIntersecting) {
+                    setContentVisibility(true)
+                }
             })
         })
         const target: any = document.querySelector('#contentReference')

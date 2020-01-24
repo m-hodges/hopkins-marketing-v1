@@ -1,8 +1,7 @@
 .services {
     background-image: url('/images/thomas-drouault-IBUcu_9vXJc-unsplash.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
-    min-width: 100%;
-    @include centerFlexContainer(column);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

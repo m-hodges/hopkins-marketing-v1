@@ -7,8 +7,15 @@
         height: 50vh;
     }
     &--centered {
+        &__col {
+            @include centerFlexContainer(column)
+        }
+        &__row {
+            @include centerFlexContainer(row)
+        }
+    }
+    &--wrap {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
     }
 }

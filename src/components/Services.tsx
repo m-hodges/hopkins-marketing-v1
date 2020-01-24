@@ -7,16 +7,17 @@ import { IService } from '../data'
 
 const Services = () => {
     return (
-        <div className='services container--full'>
+        <div className='services container--full container--centered__col'>
             <div>
                 <h2>Our Services</h2>
             </div>
-            <div>
+            <div className='container--wrap'>
                 {data.map((service: IService, i: number) => (
                     <Service 
-                    title={service.title}
-                    description={service.description}
-                    key={i} />
+                        title={service.title}
+                        description={service.description}
+                        key={i} 
+                    />
                 ))}
             </div>
         </div>

@@ -7,12 +7,16 @@
     color: white;
     @include centerFlexContainer(column);
     text-align: center;
-    &:hover {
-        background-color: $primary-brand-color;
-    }
     &--icon {
-        fill: white;
+        color: pink;
         height: 50px;
         width: 50px;
+    }
+    &--title {
+        color: white;
+        transition: color 0.5s linear;
+    }
+    &:hover .service--title {
+        color: $primary-brand-color;
     }
 }

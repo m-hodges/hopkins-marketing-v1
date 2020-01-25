@@ -27,6 +27,7 @@ const Services = () => {
             <div className='services--service-container container--wrap'>
                 {data.map((service: IService, i: number) => (
                     <Service
+                        id={service.id}
                         title={service.title}
                         firstBulletpoint={service.firstBulletpoint}
                         secondBulletpoint={service.secondBulletpoint}

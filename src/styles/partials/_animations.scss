@@ -10,11 +10,15 @@
     }
 }
 
-//hr scroll in from side animation
-// .scroll-in {
-//     width: 0%;
-//     transition: width 1s;
-//     &--visible {
-//         width: 100%;
-//     }
-// }
+.scroll-in-hr {
+    display: inline-block;
+    color: $primary-brand-color;
+    margin-bottom: 20px;
+    transition: width 1.2s ease-out;
+    &__visible {
+        width: 100%;
+    }
+    &__not-visible {
+        width: 1%;
+    }
+}

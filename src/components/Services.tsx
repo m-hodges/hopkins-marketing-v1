@@ -31,6 +31,7 @@ const Services = () => {
                         firstBulletpoint={service.firstBulletpoint}
                         secondBulletpoint={service.secondBulletpoint}
                         thirdBulletpoint={service.thirdBulletpoint}
+                        icon={service.icon}
                         key={i}
                     />
                 ))}

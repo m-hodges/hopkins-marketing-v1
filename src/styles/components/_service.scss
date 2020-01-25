@@ -6,6 +6,7 @@
     overflow: hidden;
     color: white;
     @include centerFlexContainer(column);
+    text-align: center;
     &:hover {
         background-color: $primary-brand-color;
     }

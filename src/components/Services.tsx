@@ -22,7 +22,7 @@ const Services = () => {
             <div className='services--background'></div>
             <h2 className='alt-heading' id='servicesReference'>
                 Our Services
-                <hr className={`services--hr scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>
+                <hr className={`scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>
             </h2>
             <div className='services--service-container container--wrap'>
                 {data.map((service: IService, i: number) => (

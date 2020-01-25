@@ -5,7 +5,7 @@ import IService from '../types'
 const Service = (props: IService) => {
     return (
         <div className='service'>
-            <h3>{props.title}</h3>
+            <h3>{props.title.toUpperCase()}</h3>
             <ul>
                 <li>
                     {props.firstBulletpoint}

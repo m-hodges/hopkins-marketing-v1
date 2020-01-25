@@ -11,6 +11,8 @@
         background-color: $primary-brand-color;
     }
     &--icon {
-        color: white;
+        fill: white;
+        height: 50px;
+        width: 50px;
     }
 }

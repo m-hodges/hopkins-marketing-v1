@@ -1,4 +1,6 @@
 export default interface IService {
     title: string,
-    description: string
+    firstBulletpoint: string,
+    secondBulletpoint: string,
+    thirdBulletpoint: string
 }

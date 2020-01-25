@@ -13,14 +13,25 @@ h1 {
 }
 
 h2 {
-    color: $primary-brand-color;
+    color: $primary-font-color;
     font-size: 64px;
     margin: 0px;
 }
 
 p {
-    color: $secondary-background-color;
+    color: $secondary-font-color;
     font-size: 24px;
     margin: 0px;
 }
 
+.heading {
+    color: $primary-brand-color;
+    font-size: 72px;
+    margin: 0px;
+}
+
+.alt-heading {
+    color: $secondary-brand-color;
+    font-size: 72px;
+    margin: 0px;
+}

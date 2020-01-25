@@ -4,9 +4,19 @@ import IService from '../types'
 
 const Service = (props: IService) => {
     return (
-        <div style={{width: '200px', height: '200px', backgroundColor: 'blue', overflow: 'hidden', margin: '20px'}}>
+        <div className='service'>
             <h3>{props.title}</h3>
-            <p>{props.description}</p>
+            <ul>
+                <li>
+                    {props.firstBulletpoint}
+                </li>
+                <li>
+                    {props.secondBulletpoint}
+                </li>
+                <li>
+                    {props.thirdBulletpoint}
+                </li>
+            </ul>
         </div>
     );
 };

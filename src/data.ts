@@ -2,28 +2,40 @@ import IService from './types'
 
 const data: IService[] = [
     {
-        title: 'Email Marketing',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lectus dapibus tristique volutpat. Maecenas pretium ipsum non ullamcorper elementum. Duis eu iaculis metus. Pellentesque at ligula euismod, feugiat nisi in, sollicitudin turpis. Mauris lacinia velit nisi, in rutrum augue congue vel.'
+        title: 'Service Name',
+        firstBulletpoint: 'Input keywords here',
+        secondBulletpoint: 'Input keywords here',
+        thirdBulletpoint: 'Input keywords here'
     },
     {
-        title: 'Website Creation',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lectus dapibus tristique volutpat. Maecenas pretium ipsum non ullamcorper elementum. Duis eu iaculis metus. Pellentesque at ligula euismod, feugiat nisi in, sollicitudin turpis. Mauris lacinia velit nisi, in rutrum augue congue vel.'
+        title: 'Service Name',
+        firstBulletpoint: 'Input keywords here',
+        secondBulletpoint: 'Input keywords here',
+        thirdBulletpoint: 'Input keywords here'
     },
     {
-        title: 'Website Creation',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lectus dapibus tristique volutpat. Maecenas pretium ipsum non ullamcorper elementum. Duis eu iaculis metus. Pellentesque at ligula euismod, feugiat nisi in, sollicitudin turpis. Mauris lacinia velit nisi, in rutrum augue congue vel.'
+        title: 'Service Name',
+        firstBulletpoint: 'Input keywords here',
+        secondBulletpoint: 'Input keywords here',
+        thirdBulletpoint: 'Input keywords here'
     },
     {
-        title: 'Website Creation',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lectus dapibus tristique volutpat. Maecenas pretium ipsum non ullamcorper elementum. Duis eu iaculis metus. Pellentesque at ligula euismod, feugiat nisi in, sollicitudin turpis. Mauris lacinia velit nisi, in rutrum augue congue vel.'
+        title: 'Service Name',
+        firstBulletpoint: 'Input keywords here',
+        secondBulletpoint: 'Input keywords here',
+        thirdBulletpoint: 'Input keywords here'
     },
     {
-        title: 'Website Creation',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lectus dapibus tristique volutpat. Maecenas pretium ipsum non ullamcorper elementum. Duis eu iaculis metus. Pellentesque at ligula euismod, feugiat nisi in, sollicitudin turpis. Mauris lacinia velit nisi, in rutrum augue congue vel.'
+        title: 'Service Name',
+        firstBulletpoint: 'Input keywords here',
+        secondBulletpoint: 'Input keywords here',
+        thirdBulletpoint: 'Input keywords here'
     },
     {
-        title: 'Website Creation',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet lectus dapibus tristique volutpat. Maecenas pretium ipsum non ullamcorper elementum. Duis eu iaculis metus. Pellentesque at ligula euismod, feugiat nisi in, sollicitudin turpis. Mauris lacinia velit nisi, in rutrum augue congue vel.'
+        title: 'Service Name',
+        firstBulletpoint: 'Input keywords here',
+        secondBulletpoint: 'Input keywords here',
+        thirdBulletpoint: 'Input keywords here'
     }
 ]
 

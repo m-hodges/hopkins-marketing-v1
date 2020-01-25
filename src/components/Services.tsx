@@ -8,14 +8,18 @@ import IService from '../types'
 const Services = () => {
     return (
         <div className='services container--full container--centered__col'>
+            <div className='services--background'></div>
             <div>
-                <h2>Our Services</h2>
+                <h2 className='alt-heading'>Our Services</h2>
+                <hr className='about--hr'/>
             </div>
-            <div className='container--wrap'>
+            <div className='services--service-container container--wrap'>
                 {data.map((service: IService, i: number) => (
                     <Service 
                         title={service.title}
-                        description={service.description}
+                        firstBulletpoint={service.firstBulletpoint}
+                        secondBulletpoint={service.secondBulletpoint}
+                        thirdBulletpoint={service.thirdBulletpoint}
                         key={i} 
                     />
                 ))}

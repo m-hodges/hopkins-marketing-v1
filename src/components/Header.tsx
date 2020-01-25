@@ -8,7 +8,8 @@ type Props = {
 const Header = ( { isHeaderVisible } : Props ) => {
     return (
         <>
-            <div className={(isHeaderVisible) ? 'header header__backgroundVisible' : 'header' }>
+            <div className='header'>
+                <div className={(isHeaderVisible) ? 'header--background header--background__backgroundVisible' : 'header--background' }></div>
                 {isHeaderVisible &&
                     <>
                         <a href="#" className='header--brand'>

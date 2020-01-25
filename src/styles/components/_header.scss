@@ -8,7 +8,7 @@
     padding-right: 100px;
     transition: background-color 0.5s ease-out;
     &__backgroundVisible {
-        background-color: $secondary-background-color;
+        background-color: $alternative-background-color;
         transition: background-color 0.5s ease-in;
     }
     &--brand {

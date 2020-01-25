@@ -4,3 +4,15 @@
     border-top: 1px solid white;
     padding-top: 5px;
 }
+
+.scroll-in-hr {
+    display: inline-block;
+    color: $primary-brand-color;
+    transition: width 1.2s ease-out;
+    &__visible {
+        width: 100%;
+    }
+    &__not-visible {
+        width: 10%;
+    }
+}

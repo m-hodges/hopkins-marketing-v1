@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Service from './Service'
 
@@ -6,21 +6,32 @@ import data from '../data'
 import IService from '../types'
 
 const Services = () => {
+    const [ isHrVisible, setHrVisibility ] = useState<boolean>(false)
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                setHrVisibility(entry.isIntersecting)
+            })
+        })
+        const target: any = document.querySelector('#servicesReference')
+        observer.observe(target)
+        return () => observer.unobserve(target)
+    }, [])
     return (
-        <div className='services container--full container--centered__col'>
+        <div className='services container--centered__col'>
             <div className='services--background'></div>
-            <div>
-                <h2 className='alt-heading'>Our Services</h2>
-                <hr className='about--hr'/>
-            </div>
+            <h2 className='alt-heading' id='servicesReference'>
+                Our Services
+                <hr className={`services--hr scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>
+            </h2>
             <div className='services--service-container container--wrap'>
                 {data.map((service: IService, i: number) => (
-                    <Service 
+                    <Service
                         title={service.title}
                         firstBulletpoint={service.firstBulletpoint}
                         secondBulletpoint={service.secondBulletpoint}
                         thirdBulletpoint={service.thirdBulletpoint}
-                        key={i} 
+                        key={i}
                     />
                 ))}
             </div>

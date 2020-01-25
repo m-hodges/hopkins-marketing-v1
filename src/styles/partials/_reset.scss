@@ -6,7 +6,7 @@ body {
 a {
     text-decoration: none;
     &:hover {
-        color: gray;
+        color: $primary-brand-color;
     }
 }
 

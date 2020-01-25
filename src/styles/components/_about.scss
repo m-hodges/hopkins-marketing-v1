@@ -8,15 +8,6 @@
         margin: 20px 100px;
     }
     &--hr {
-        display: inline-block;
         margin-bottom: 20px;
-        color: $primary-brand-color;
-        transition: width 1.2s ease-out;
-        &__visible {
-            width: 100%;
-        }
-        &__not-visible {
-            width: 0%;
-        }
     }
 }

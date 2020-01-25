@@ -4,6 +4,7 @@ import Hero from './Hero'
 import About from './About'
 import Services from './Services'
 import Clients from './Clients'
+import Contact from './Contact'
 
 type Props = {
     setHeaderVisibility: (arg: boolean) => void;
@@ -16,6 +17,7 @@ const Main = ( { setHeaderVisibility } : Props) => {
             <About />
             <Services />
             <Clients />
+            <Contact />
         </>
     );
 };

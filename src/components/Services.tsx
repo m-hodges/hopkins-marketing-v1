@@ -19,7 +19,7 @@ const Services = () => {
     }, [])
     return (
         <div className='services container--centered__col'>
-            <div className='services--background'></div>
+            <div className='background services--background'></div>
             <h2 className='alt-heading' id='servicesReference'>
                 Our Services
                 <hr className={`scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>

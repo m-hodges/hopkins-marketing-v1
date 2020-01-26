@@ -6,9 +6,6 @@
     padding: 50px 100px;
     text-align: center;
     &--background {
-        height: 100%;
-        width: 100%;
-        position: absolute;
         z-index: -2;
         background-image: url('/images/thomas-drouault-IBUcu_9vXJc-unsplash.jpg');
         filter: brightness(50%) contrast(95%);

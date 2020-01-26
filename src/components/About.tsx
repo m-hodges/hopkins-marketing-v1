@@ -18,7 +18,7 @@ const About = () => {
     }, [])
     return (
         <div className='about container--centered__col' >
-            <div className='about--background'></div>
+            <div className='background about--background'></div>
             <h2>
                 Lorem Ipsum
                 <hr className={`scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>

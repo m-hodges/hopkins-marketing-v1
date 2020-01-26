@@ -21,7 +21,7 @@ const Hero = ( { setHeaderVisibility } : Props ) => {
     }, [])
     return (
         <div className='hero container--centered' id='headerReference'>
-            <div className='hero--background'></div>
+            <div className='background hero--background'></div>
             <div className='hero--logo__container'>
                 <img 
                     src="/images/HMG-Logo-Web.png" 

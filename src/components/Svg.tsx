@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Svg = () => {
+type Props = {
+    path: string
+}
+
+const Svg = ({ path }: Props) => {
     return (
         <div>
-            test
+            {path}
         </div>
     );
 };

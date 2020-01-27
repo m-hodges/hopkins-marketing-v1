@@ -5,6 +5,8 @@ type Props = {
 }
 
 const Svg = ({ path }: Props) => {
+    //test what i can do with an imported svg directly
+    //map svg to test component
     return (
         <div>
             {path}

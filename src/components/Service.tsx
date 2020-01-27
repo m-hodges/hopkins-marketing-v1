@@ -1,10 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 
 import IService from '../types'
 
 const Service = (props: IService) => {
+    //create test component
+    // import('./Svg')
+    //import it - check if it needs to be async
+    //test what i can do with an imported svg directly
+    //map svg to test component
+    // import(props.icon)
     const reference = `${props.id}Reference`
     const [ isContentVisible, setContentVisibility ] = useState<boolean>(false)
+    const [ dynamicComponent, setDynamicComponent ] = useState<any>(null)
+    // const importSvg = async () => {
+    //     const importedSvg = await import('./Svg')
+    //     setDynamicComponent(importedSvg.default)
+    // }
+    // importSvg()
+    const dynamicSvg = React.lazy(() => import('./Svg'))
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -19,6 +32,10 @@ const Service = (props: IService) => {
     }, [])
     return (
         <div className='service' >
+            <Suspense fallback={<div>Loading...</div>}>
+                {/* <dynamicSvg /> */}
+            </Suspense>
+            {/* {dynamicComponent && <dynamicComponent />} */}
             <img src={props.icon} alt={props.title} className='service--icon'/>
             <h3 className='service--title' >
                 {props.title.toUpperCase()}

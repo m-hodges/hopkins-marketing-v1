@@ -33,6 +33,14 @@ input {
     color: $secondary-font-color;
     font-size: 24px;
     margin: 0px;
+    @include mainFont;
+}
+
+textarea {
+    color: $secondary-font-color;
+    font-size: 18px;
+    margin: 0px;
+    @include mainFont;
 }
 
 li {

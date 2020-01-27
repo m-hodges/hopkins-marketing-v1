@@ -9,20 +9,20 @@ const Contact = () => {
             <div>
                 <form action="POST">
                     <div className='contact--form__item'>
-                        <p>Name</p>
+                        <p className='contact--form__label'>Name</p>
                         <input type="text" required className='contact--form__input'/>
                     </div>
                     <div className='contact--form__item'>
-                        <p>Email</p>
+                        <p className='contact--form__label'>Email</p>
                         <input type="email" required className='contact--form__input'/>
                     </div>
                     <div className='contact--form__item'>
-                        <p>Phone</p>
+                        <p className='contact--form__label'>Phone</p>
                         <input type="text" className='contact--form__input'/>
                     </div>
                     <div className='contact--form__item'>
-                        <p>Message</p>
-                        <textarea name="" id="" cols={50} rows={20} required className='contact--form__text-area'></textarea>
+                        <p className='contact--form__label'>Message</p>
+                        <textarea name="" id="" cols={50} rows={20} required className='contact--form__text-area' placeholder='Enter your message here'></textarea>
                     </div>
                     <div className='contact--form__item contact--form__button'>
                         <button type="submit" className='contact--button'>Send</button>

@@ -3,10 +3,9 @@ import React, { useEffect, useState, Suspense } from 'react';
 import IService from '../types'
 
 const Service = (props: IService) => {
-    //test what i can do with an imported svg directly
-    //map svg to test component
     const reference = `${props.id}Reference`
     const [ isContentVisible, setContentVisibility ] = useState<boolean>(false)
+    //testing dynamic imports, not actually neccessary here
     const Svg = React.lazy(() => import('./Svg'))
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {

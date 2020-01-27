@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Contact = () => {
+    const [ isHrVisible, setHrVisibility ] = useState<boolean>(false)
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                setHrVisibility(entry.isIntersecting)
+            })
+        })
+        const target: any = document.querySelector('#contactReference')
+        observer.observe(target)
+        return () => observer.unobserve(target)
+    }, [])
     return (
         <div className='contact'>
+            <div className='background contact--background'></div>
             <h2>
                 Contact Form
+                <hr className={`scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>
             </h2>
-            <div>
+            <div id='contactReference' className='contact--form'>
                 <form action="POST">
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Name</p>

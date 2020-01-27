@@ -1,25 +1,30 @@
 .contact {
     @include centerFlexContainer(column);
-    background-color: pink;
     padding: 50px;
-    // text-align: center;
+    text-align: center;
+    &--background {
+        background: url('/images/funky-lines.png');
+        background-repeat: repeat;
+        opacity: 0.6;
+    }
     &--form {
+        margin: 20px;
         &__item {
-            margin: 10px;
+            margin: 20px;
             text-align: left;
         }
         &__label {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
         &__input {
             height: 50px;
-            width: 500px;
+            width: 750px;
             font-size: 24px;
             // color: white;
         }
         &__text-area {
             height: 250px;
-            width: 500px;
+            width: 750px;
             overflow: auto;
             resize: vertical;
         }

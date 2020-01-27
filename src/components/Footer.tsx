@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='footer'>
             <div className='footer--row__main'>
                 <div className='footer--column footer--column__centered'>
-                    <img src="/images/hopkins_marketing_logo.jpg" alt="Hopkins Marketing Logo" className='footer--image' />
+                    <img src="/images/HMG-Logo-Web.png" alt="Hopkins Marketing Logo" className='footer--image' />
                 </div>
                 <div className='footer--column'>
                     <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>

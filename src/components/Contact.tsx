@@ -35,7 +35,7 @@ const Contact = () => {
                     </div>
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Message</p>
-                        <textarea name="" id="" cols={50} rows={20} required className='contact--form__text-area' placeholder='Enter your message here'></textarea>
+                        <textarea name="" id="" cols={50} rows={20} required className='contact--form__text-area' placeholder=' Enter your message here'></textarea>
                     </div>
                     <div className='contact--form__item contact--form__button'>
                         <button type="submit" className='contact--button'>Send</button>

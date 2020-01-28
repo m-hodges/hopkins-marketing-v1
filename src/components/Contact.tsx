@@ -16,7 +16,7 @@ const Contact = () => {
         <div className='contact'>
             <div className='background contact--background'></div>
             <h2>
-                Contact Form
+                Contact Us Now!
                 <hr className={`scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>
             </h2>
             <div id='contactReference' className='contact--form'>

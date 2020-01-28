@@ -12,17 +12,17 @@ const Footer = () => {
                     <img src="/images/HMG-Logo-Web.png" alt="Hopkins Marketing Logo" className='footer--image' />
                 </div>
                 <div className='footer--column'>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
-                        <FacebookIcon className='footer--icon'/>
-                    </a>  
-                    <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
-                        <TwitterIcon className='footer--icon'/>
+                    <div>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
+                            <FacebookIcon className='footer--icon'/>
+                        </a>  
+                        <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
+                            <TwitterIcon className='footer--icon'/>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
+                            <InstagramIcon className='footer--icon'/>
                     </a>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className='footer--link'>
-                        <InstagramIcon className='footer--icon'/>
-                    </a>
-                </div>
-                <div className='footer--column'>
+                    </div>
                     <p>Contact Details:</p>
                     <p>Ph: 027312313123</p>
                     <p>Email: hopkinsmarketing@gmail.com</p>

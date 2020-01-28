@@ -20,7 +20,7 @@ const Contact = () => {
                 <hr className={`scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>
             </h2>
             <div id='contactReference' className='contact--form'>
-                <form action="POST">
+                <form action="/email" method='POST'>
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Name</p>
                         <input type="text" required className='contact--form__input'/>

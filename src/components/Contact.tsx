@@ -23,11 +23,11 @@ const Contact = () => {
                 <form action="/email" method='POST'>
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Name</p>
-                        <input type="text" required className='contact--form__input'/>
+                        <input type="text" className='contact--form__input'/>
                     </div>
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Email</p>
-                        <input type="email" required className='contact--form__input'/>
+                        <input type="email" className='contact--form__input'/>
                     </div>
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Phone</p>
@@ -35,7 +35,7 @@ const Contact = () => {
                     </div>
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Message</p>
-                        <textarea name="" id="" cols={50} rows={20} required className='contact--form__text-area' placeholder=' Enter your message here'></textarea>
+                        <textarea name="" id="" cols={50} rows={20} className='contact--form__text-area' placeholder=' Enter your message here'></textarea>
                     </div>
                     <div className='contact--form__item contact--form__button'>
                         <button type="submit" className='contact--button'>Send</button>

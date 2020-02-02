@@ -34,10 +34,18 @@ module.exports = {
         contentBase: path.join(__dirname, 'public/'),
         port: 3000,
         publicPath: 'http://localhost:3000/dist/',
-        hotOnly: true
+        hotOnly: true,
+        proxy: {
+            '^/api/*': {
+                target: 'http://localhost:8080/api/',
+                secure: false
+            }
+        }
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin({
+            multiStep: true
+        })
     ],
     devtool: 'cheap-module-source-map'
 }

@@ -12,6 +12,10 @@ const Contact = () => {
         observer.observe(target)
         return () => observer.unobserve(target)
     }, [])
+    const submitHandler = () => {
+        fetch('/email')
+            .then((response) => console.log(response))
+    }
     return (
         <div className='contact'>
             <div className='background contact--background'></div>
@@ -38,7 +42,7 @@ const Contact = () => {
                         <textarea name="" id="" cols={50} rows={20} className='contact--form__text-area' placeholder=' Enter your message here'></textarea>
                     </div>
                     <div className='contact--form__item contact--form__button'>
-                        <button type="submit" className='contact--button'>Send</button>
+                        <button type="submit" onClick={() => (submitHandler())} className='contact--button'>Send</button>
                     </div>
                 </form>
             </div>

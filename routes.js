@@ -3,9 +3,9 @@ const path = require('path')
 
 const router = express.Router()
 
-router.post('/email', (req, res) => {
-    res.redirect('/')
-})
+// router.post('/email', (req, res) => {
+//     res.redirect('/')
+// })
 
 router.get('/', (req, res) => {
     res.sendFile('index.html')

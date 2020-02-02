@@ -13,7 +13,8 @@ const Contact = () => {
         return () => observer.unobserve(target)
     }, [])
     const submitHandler = () => {
-        fetch('/email')
+        fetch('/api/email')
+            .then((response) => response.json())
             .then((response) => console.log(response))
     }
     return (
@@ -24,7 +25,7 @@ const Contact = () => {
                 <hr className={`scroll-in-hr ${(isHrVisible) ? 'scroll-in-hr__visible' : 'scroll-in-hr__not-visible'}`}/>
             </h2>
             <div id='contactReference' className='contact--form'>
-                <form action="/email" method='POST'>
+                {/* <form action="/email" method='POST'> */}
                     <div className='contact--form__item'>
                         <p className='contact--form__label'>Name</p>
                         <input type="text" className='contact--form__input'/>
@@ -44,7 +45,7 @@ const Contact = () => {
                     <div className='contact--form__item contact--form__button'>
                         <button type="submit" onClick={() => (submitHandler())} className='contact--button'>Send</button>
                     </div>
-                </form>
+                {/* </form> */}
             </div>
         </div>
     );

@@ -36,9 +36,8 @@ module.exports = {
         publicPath: 'http://localhost:3000/dist/',
         hotOnly: true,
         proxy: {
-            '^/api/*': {
-                target: 'http://localhost:8080/api/',
-                secure: false
+            '/api': {
+                target: 'http://localhost:8080'
             }
         }
     },

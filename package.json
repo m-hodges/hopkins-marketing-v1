@@ -8,8 +8,9 @@
     "build": "webpack --mode production",
     "client": "webpack-dev-server --mode development",
     "server": "nodemon . localhost 8080",
-    "dev": "concurrently \"npm run client\" \"npm run server\""
+    "dev": "concurrently \"npm:client\" \"npm:server\""
   },
+  "proxy": "http://localhost:8080",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/m-hodges/rts-boilerplate.git"

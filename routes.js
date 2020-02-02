@@ -3,12 +3,13 @@ const path = require('path')
 
 const router = express.Router()
 
-// router.post('/email', (req, res) => {
-//     res.redirect('/')
-// })
-
-router.get('/', (req, res) => {
-    res.sendFile('index.html')
+router.get('/api/email', (req, res) => {
+    
+    res.send({ email: 'hopkins@gmail.com'})
 })
+
+// router.get('/', (req, res) => {
+//     res.sendFile('index.html')
+// })
 
 module.exports = router

@@ -1,20 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import observer from '../utils/observer'
 
 const About = () => {
     const [ isContentVisible, setContentVisibility ] = useState<boolean>(false)
     const [ isHrVisible, setHrVisibility ] = useState<boolean>(false)
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                setHrVisibility(entry.isIntersecting)
-                if (entry.isIntersecting) {
-                    setContentVisibility(true)
-                }
-            })
-        })
-        const target: any = document.querySelector('#aboutReference')
-        observer.observe(target)
-        return () => observer.unobserve(target)
+        observer(setHrVisibility, 'aboutReference', setContentVisibility)
     }, [])
     return (
         <div className='about container--centered__col' >

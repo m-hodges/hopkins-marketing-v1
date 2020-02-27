@@ -1,23 +1,15 @@
 import React, { useEffect, useState, Suspense } from 'react';
 
 import IService from '../types'
+// import {contentObserver} from '../utils/observers'
 
 const Service = (props: IService) => {
     const reference = `${props.id}Reference`
-    const [ isContentVisible, setContentVisibility ] = useState<boolean>(false)
+    const [ isContentVisible, setContentVisibility ] = useState(false)
     //testing dynamic imports, not actually neccessary here
     const Svg = React.lazy(() => import('./Svg'))
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setContentVisibility(true)
-                }
-            })
-        })
-        const target: any = document.getElementById(reference)
-        observer.observe(target)
-        return () => observer.unobserve(target)
+        // contentObserver(setContentVisibility, reference)
     }, [])
     return (
         <div className='service' >

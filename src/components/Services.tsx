@@ -4,18 +4,12 @@ import Service from './Service'
 
 import data from '../data'
 import IService from '../types'
+import observer from '../utils/observer'
 
 const Services = () => {
     const [ isHrVisible, setHrVisibility ] = useState<boolean>(false)
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                setHrVisibility(entry.isIntersecting)
-            })
-        })
-        const target: any = document.querySelector('#servicesReference')
-        observer.observe(target)
-        return () => observer.unobserve(target)
+        observer(setHrVisibility, 'servicesReference')
     }, [])
     return (
         <div className='services container--centered__col'>

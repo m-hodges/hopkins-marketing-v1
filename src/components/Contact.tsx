@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import observer from '../utils/observer'
 
 const Contact = () => {
     const [ isHrVisible, setHrVisibility ] = useState<boolean>(false)
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                setHrVisibility(entry.isIntersecting)
-            })
-        })
-        const target: any = document.querySelector('#contactReference')
-        observer.observe(target)
-        return () => observer.unobserve(target)
+        observer(setHrVisibility, 'contactReference')
     }, [])
     const submitHandler = () => {
         fetch('/api/email')

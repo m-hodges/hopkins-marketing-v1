@@ -1,22 +1,24 @@
 .service {
-    width: 300px;
-    height: 300px;
-    background-color: transparent;
-    margin: 30px;
-    overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  margin: 30px;
+  overflow: hidden;
+  color: white;
+  @include centerFlexContainer(column);
+  text-align: center;
+  &--icon {
     color: white;
-    @include centerFlexContainer(column);
-    text-align: center;
-    &--icon {
-        color: black;
-        height: 50px;
-        width: 50px;
-    }
-    &--title {
-        color: white;
-        transition: color 0.5s linear;
-    }
-    &:hover .service--title {
-        color: $primary-brand-color;
-    }
+    transition: color 0.5s linear;
+  }
+  &--title {
+    color: white;
+    transition: color 0.5s linear;
+  }
+  &:hover .service--title {
+    color: $primary-brand-color;
+  }
+  &:hover .service--icon {
+    color: $primary-brand-color;
+  }
 }

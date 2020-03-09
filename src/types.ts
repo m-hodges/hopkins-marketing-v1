@@ -1,8 +1,10 @@
-export default interface IService {
-    id: number,
-    title: string,
-    firstBulletpoint: string,
-    secondBulletpoint: string,
-    thirdBulletpoint: string,
-    icon: string
-}
+import { IconType } from "react-icons/lib/cjs";
+
+type Service = {
+  id: number;
+  title: string;
+  details: string[];
+  icon: IconType;
+};
+
+export default Service;

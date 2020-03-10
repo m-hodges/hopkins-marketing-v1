@@ -1,6 +1,4 @@
 const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser");
 
 const router = express.Router();
 
@@ -9,41 +7,39 @@ const mailjet = require("node-mailjet").connect(
   process.env.MJ_APIKEY_PRIVATE
 );
 
-router.post("/email", (req, res) => {
-  //remember to sanitize input
-  console.log(req.body);
-  const request = mailjet.post("send", { version: "v3.1" }).request({
+const request = (name, email, phone, message) =>
+  mailjet.post("send", { version: "v3.1" }).request({
     Messages: [
       {
         From: {
           Email: "michaelcshodges@gmail.com",
-          Name: "Mailjet Pilot"
+          Name: name
         },
         To: [
           {
-            Email: "michaelcshodges@gmail.com",
-            Name: "passenger 1"
+            Email: email,
+            Name: "Michael Hodges"
           }
         ],
-        Subject: "Your email flight plan!",
-        TextPart:
-          "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
-        HTMLPart:
-          '<h3>Dear passenger 1, welcome to <a href="https://www.mailjet.com/">Mailjet</a>!</h3><br />May the delivery force be with you!'
+        Subject: "New enquiry received",
+        TextPart: message,
+        HTMLPart: ""
       }
     ]
   });
-  request
+
+router.post("/email", (req, res) => {
+  console.log(req.body.formData);
+  //remember to sanitize input
+  //set up a bounce email that confirms in their email that we have received their enquiry
+  const { name, email, phone, message } = req.body.formData;
+  request(name, email, phone, message)
     .then(result => {
       console.log(result.body);
     })
     .catch(err => {
-      console.log(err.statusCode);
+      console.log("Error: ", err.statusCode);
     });
-});
-
-router.get("/", (req, res) => {
-  res.sendFile("index.html");
 });
 
 module.exports = router;

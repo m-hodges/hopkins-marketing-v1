@@ -28,7 +28,6 @@ const request = (name, email, phone, message) =>
   });
 
 router.post("/email", (req, res) => {
-  console.log(req.body.formData);
   const { name, email, phone, message } = req.body.formData;
   if (
     typeof name !== "string" ||
@@ -40,7 +39,7 @@ router.post("/email", (req, res) => {
   }
   request(name, email, phone, message)
     .then(result => {
-      console.log(result.body);
+      console.log("Success: ", result.body);
     })
     .catch(err => {
       console.log("Error: ", err.statusCode);

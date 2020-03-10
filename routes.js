@@ -13,7 +13,7 @@ const request = (name, email, phone, message) =>
       {
         From: {
           Email: "michaelcshodges@gmail.com",
-          Name: name
+          Name: "Hopkins Marketing Group Website"
         },
         To: [
           {
@@ -22,17 +22,22 @@ const request = (name, email, phone, message) =>
           }
         ],
         Subject: "New enquiry received",
-        TextPart: message,
-        HTMLPart: ""
+        HTMLPart: `<h3>New Enquiry Received:</h3> <br /> <ul><li><strong>Name:</strong> ${name}</li><li><strong>Email:</strong> ${email}</li><li><strong>Phone:</strong> ${phone}</li><li><strong>Message:</strong> ${message}</li></ul>`
       }
     ]
   });
 
 router.post("/email", (req, res) => {
   console.log(req.body.formData);
-  //remember to sanitize input
-  //set up a bounce email that confirms in their email that we have received their enquiry
   const { name, email, phone, message } = req.body.formData;
+  if (
+    typeof name !== "string" ||
+    typeof email !== "string" ||
+    typeof phone !== "string" ||
+    typeof message !== "string"
+  ) {
+    return;
+  }
   request(name, email, phone, message)
     .then(result => {
       console.log(result.body);
@@ -40,6 +45,7 @@ router.post("/email", (req, res) => {
     .catch(err => {
       console.log("Error: ", err.statusCode);
     });
+  //set up a bounce email that confirms in their email that we have received their enquiry
 });
 
 module.exports = router;

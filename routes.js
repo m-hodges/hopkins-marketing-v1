@@ -27,7 +27,12 @@ const request = (name, email, phone, message) =>
     ]
   });
 
+const validateEmail = emailString => {
+  // const regex = /[\S]*@/
+};
+
 router.post("/email", (req, res) => {
+  //check for valid email with regex
   const { name, email, phone, message } = req.body.formData;
   if (
     typeof name !== "string" ||

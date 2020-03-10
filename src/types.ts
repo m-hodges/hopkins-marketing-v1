@@ -1,10 +1,15 @@
 import { IconType } from "react-icons/lib/cjs";
 
-type Service = {
+export type Service = {
   id: number;
   title: string;
   details: string[];
   icon: IconType;
 };
 
-export default Service;
+export type FormData = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};

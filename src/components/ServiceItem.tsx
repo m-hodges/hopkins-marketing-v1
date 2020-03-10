@@ -1,5 +1,5 @@
 import React from "react";
-import Service from "../types";
+import { Service } from "../types";
 import useObserver from "../hooks/useObserver";
 
 const ServiceItem = (props: Service) => {

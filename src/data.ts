@@ -1,7 +1,7 @@
-import IService from "./types";
+import { Service } from "./types";
 import { MdEmail } from "react-icons/md";
 
-const data: IService[] = [
+const data: Service[] = [
   {
     id: 1,
     title: "Service Name",

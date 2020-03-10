@@ -3,7 +3,7 @@ import React from "react";
 import ServiceItem from "./ServiceItem";
 
 import data from "../data";
-import Service from "../types";
+import { Service } from "../types";
 import useObserver from "../hooks/useObserver";
 
 const ServiceList = () => {

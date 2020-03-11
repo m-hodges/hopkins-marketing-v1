@@ -7,7 +7,7 @@ const mailjet = require("node-mailjet").connect(
   process.env.MJ_APIKEY_PRIVATE
 );
 
-const request = (name, email, phone, message) =>
+const mailToSelf = (name, email, phone, message) =>
   mailjet.post("send", { version: "v3.1" }).request({
     Messages: [
       {
@@ -23,6 +23,26 @@ const request = (name, email, phone, message) =>
         ],
         Subject: "New enquiry received",
         HTMLPart: `<h3>New Enquiry Received:</h3> <br /> <ul><li><strong>Name:</strong> ${name}</li><li><strong>Email:</strong> ${email}</li><li><strong>Phone:</strong> ${phone}</li><li><strong>Message:</strong> ${message}</li></ul>`
+      }
+    ]
+  });
+
+const mailToClient = (name, email, phone, message) =>
+  mailjet.post("send", { version: "v3.1" }).request({
+    Messages: [
+      {
+        From: {
+          Email: "michaelcshodges@gmail.com",
+          Name: "Hopkins Marketing Group"
+        },
+        To: [
+          {
+            Email: email,
+            Name: name
+          }
+        ],
+        Subject: "New enquiry received",
+        HTMLPart: `<h3>Thank you for your enquiry.</h3><br /><p>We will get back to you as soon as possible.</p>`
       }
     ]
   });
@@ -46,15 +66,23 @@ router.post("/email", (req, res) => {
     console.log("rejected: no email");
     return;
   }
-  request(name, email, phone, message)
-    .then(result => {
-      console.log("Success: ", result.body);
-    })
-    .catch(err => {
-      console.log("Error: ", err.statusCode);
-    });
-  //set up a bounce email that confirms in their email that we have received their enquiry
-  //set up validation on the front end - await response, display success or failure to the user if response successful or failure
+  try {
+    mailToSelf(name, email, phone, message)
+      .then(result => {
+        console.log("Success: ", result.body);
+      })
+      .then(() => {
+        try {
+          mailToClient(name, email, phone, message).then(result => {
+            console.log("Bounce Email Success: ", result.body);
+          });
+        } catch (error) {
+          console.log("Bounce Error: ", err.statusCode);
+        }
+      });
+  } catch (error) {
+    console.log("Bounce Error: ", err.statusCode);
+  }
 });
 
 module.exports = router;

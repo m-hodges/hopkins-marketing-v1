@@ -93,9 +93,11 @@ const Contact = () => {
           <div className="contact--form__item">
             <p className="contact--form__label">Phone</p>
             <input
-              type="tel"
+              type="text"
+              pattern="[0-9]+"
               className="contact--form__input"
               name="phone"
+              title="Number required"
               required
               onChange={phoneInputHandler}
             />
@@ -104,6 +106,7 @@ const Contact = () => {
             <p className="contact--form__label">Message</p>
             <textarea
               name="content"
+              title="A message must be entered"
               cols={50}
               rows={20}
               className="contact--form__text-area"

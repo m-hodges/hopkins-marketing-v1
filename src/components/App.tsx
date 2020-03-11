@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { hot } from "react-hot-loader";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Header from "./Header";
 import About from "./About";
@@ -14,7 +14,7 @@ const App = () => {
   const [isHeaderVisible, setHeaderVisibility] = useState<boolean>(false);
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Header isHeaderVisible={isHeaderVisible} />
         <Switch>
           <Route path="/contact">
@@ -34,7 +34,7 @@ const App = () => {
           </Route>
         </Switch>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 };

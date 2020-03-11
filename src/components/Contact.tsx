@@ -50,10 +50,12 @@ const Contact = () => {
     dispatch({ type: setMessage, payload: event.target.value });
   };
 
-  const submitHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendEmail(state).then(response => console.log(response));
+    sendEmail(state).then((response: any) => console.log(response));
   };
+
+  //set up validation on the front end - await response, display success or failure to the user if response successful or failure
 
   return (
     <div className="contact">
@@ -67,7 +69,7 @@ const Contact = () => {
         />
       </h2>
       <div id="contactReference" className="contact--form">
-        <form>
+        <form onSubmit={submitHandler}>
           <div className="contact--form__item">
             <p className="contact--form__label">Name</p>
             <input
@@ -111,11 +113,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="contact--form__item contact--form__button">
-            <button
-              type="submit"
-              onClick={submitHandler}
-              className="contact--button"
-            >
+            <button type="submit" className="contact--button">
               Send
             </button>
           </div>

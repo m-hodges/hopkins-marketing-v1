@@ -1,5 +1,5 @@
 const express = require("express");
-
+require("dotenv").config();
 const router = express.Router();
 
 const mailjet = require("node-mailjet").connect(
@@ -28,11 +28,11 @@ const request = (name, email, phone, message) =>
   });
 
 const validateEmail = emailString => {
-  // const regex = /[\S]*@/
+  const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gim;
+  return regex.test(emailString);
 };
 
 router.post("/email", (req, res) => {
-  //check for valid email with regex
   const { name, email, phone, message } = req.body.formData;
   if (
     typeof name !== "string" ||
@@ -40,6 +40,10 @@ router.post("/email", (req, res) => {
     typeof phone !== "string" ||
     typeof message !== "string"
   ) {
+    return;
+  }
+  if (!validateEmail(email)) {
+    console.log("rejected: no email");
     return;
   }
   request(name, email, phone, message)
@@ -50,6 +54,7 @@ router.post("/email", (req, res) => {
       console.log("Error: ", err.statusCode);
     });
   //set up a bounce email that confirms in their email that we have received their enquiry
+  //set up validation on the front end - await response, display success or failure to the user if response successful or failure
 });
 
 module.exports = router;

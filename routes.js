@@ -63,25 +63,26 @@ router.post("/email", (req, res) => {
     return;
   }
   if (!validateEmail(email)) {
-    console.log("rejected: no email");
     return;
   }
   try {
     mailToSelf(name, email, phone, message)
       .then(result => {
         console.log("Success: ", result.body);
+        res.json({ result });
       })
       .then(() => {
         try {
           mailToClient(name, email, phone, message).then(result => {
             console.log("Bounce Email Success: ", result.body);
+            res.json({ result });
           });
         } catch (error) {
           console.log("Bounce Error: ", err.statusCode);
         }
       });
   } catch (error) {
-    console.log("Bounce Error: ", err.statusCode);
+    console.log("Error: ", err.statusCode);
   }
 });
 

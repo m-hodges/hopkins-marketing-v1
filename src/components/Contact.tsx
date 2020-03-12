@@ -52,7 +52,9 @@ const Contact = () => {
 
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendEmail(state).then((response: any) => console.log(response));
+    sendEmail(state).then((response: any) =>
+      console.log("Response: ", response)
+    );
   };
 
   //set up validation on the front end - await response, display success or failure to the user if response successful or failure

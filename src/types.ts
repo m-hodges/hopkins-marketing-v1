@@ -13,3 +13,12 @@ export type FormData = {
   phone: string;
   message: string;
 };
+
+export type Client = {
+  id: number;
+  name: string;
+  businessName: string;
+  website: string;
+  image: string;
+  testimonial: string;
+};

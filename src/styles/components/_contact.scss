@@ -1,54 +1,54 @@
 .contact {
-    position: relative;
-    top: -50px;
-    @include centerFlexContainer(column);
-    padding: 50px;
-    text-align: center;
-    &--background {
-        /* Background pattern from Toptal Subtle Patterns */
-        background: url('/images/funky-lines.png');
-        background-repeat: repeat;
-        opacity: 0.6;
+  position: relative;
+  top: -50px;
+  @include centerFlexContainer(column);
+  padding: 50px;
+  text-align: center;
+  &--background {
+    /* Background pattern from Toptal Subtle Patterns */
+    // background: url('/images/funky-lines.png');
+    // background-repeat: repeat;
+    // opacity: 0.6;
+  }
+  &--form {
+    margin: 20px;
+    &__item {
+      margin: 20px;
+      text-align: left;
     }
-    &--form {
-        margin: 20px;
-        &__item {
-            margin: 20px;
-            text-align: left;
-        }
-        &__label {
-            margin-bottom: 10px;
-        }
-        &__input {
-            height: 50px;
-            width: 750px;
-            font-size: 24px;
-        }
-        &__text-area {
-            height: 250px;
-            width: 750px;
-            overflow: auto;
-            resize: vertical;
-        }
-        &__button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 50px;
-            margin-bottom: 0px;
-        }
+    &__label {
+      margin-bottom: 10px;
     }
-    &--button {
-        border: none;
-        background-color: $alternative-background-color;
-        color: $secondary-brand-color;
-        height: 50px;
-        width: 200px;
-        cursor: pointer;
-        font-size: 24px;
-        transition: background-color 0.5s ease-in-out;
-        &:hover {
-            background-color: $primary-brand-color;
-        }
+    &__input {
+      height: 50px;
+      width: 750px;
+      font-size: 24px;
     }
+    &__text-area {
+      height: 250px;
+      width: 750px;
+      overflow: auto;
+      resize: vertical;
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      margin-bottom: 0px;
+    }
+  }
+  &--button {
+    border: none;
+    background-color: $alternative-background-color;
+    color: $secondary-brand-color;
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.5s ease-in-out;
+    &:hover {
+      background-color: $primary-brand-color;
+    }
+  }
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 import ServiceItem from "./ServiceItem";
 
-import data from "../data";
+import { services } from "../data";
 import { Service } from "../types";
 import useObserver from "../hooks/useObserver";
 
@@ -20,7 +20,7 @@ const ServiceList = () => {
         />
       </h2>
       <div className="services--service-container container--wrap">
-        {data.map((service: Service, i: number) => (
+        {services.map((service: Service, i: number) => (
           <ServiceItem
             id={service.id}
             title={service.title}

@@ -1,15 +1,15 @@
 .about {
-    text-align: center;
-    position: relative;
-    top: -75px;
-    padding: 50px;
-    &--background {
-        /* Background pattern from Toptal Subtle Patterns */
-        background: url('/images/funky-lines.png');
-        background-repeat: repeat;
-        opacity: 0.6;
-    }
-    &--content {
-        margin: 20px 100px;
-    }
+  text-align: center;
+  position: relative;
+  top: -75px;
+  padding: 50px;
+  &--background {
+    /* Background pattern from Toptal Subtle Patterns */
+    // background: url('/images/funky-lines.png');
+    // background-repeat: repeat;
+    // opacity: 0.6;
+  }
+  &--content {
+    margin: 20px 100px;
+  }
 }

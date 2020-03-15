@@ -1,8 +1,6 @@
 import React from "react";
 
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import InstagramIcon from "@material-ui/icons/Instagram";
+import { FaTwitter, FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -24,7 +22,7 @@ const Footer = () => {
               className="footer--link"
               style={{ paddingRight: "5px" }}
             >
-              <FacebookIcon className="footer--icon" />
+              <FaFacebookSquare size={24} className="footer--icon" />
             </a>
             <a
               href="#"
@@ -33,7 +31,7 @@ const Footer = () => {
               className="footer--link"
               style={{ padding: "0px 5px" }}
             >
-              <TwitterIcon className="footer--icon" />
+              <FaTwitter size={24} className="footer--icon" />
             </a>
             <a
               href="#"
@@ -42,7 +40,7 @@ const Footer = () => {
               className="footer--link"
               style={{ paddingLeft: "5px" }}
             >
-              <InstagramIcon className="footer--icon" />
+              <FaInstagram size={24} className="footer--icon" />
             </a>
           </div>
           <p>Contact Details:</p>

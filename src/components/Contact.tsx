@@ -57,7 +57,7 @@ const Contact = () => {
     );
   };
 
-  //set up validation on the front end - await response, display success or failure to the user if response successful or failure
+  //await response, display success or failure to the user if response successful or failure
 
   return (
     <div className="contact">

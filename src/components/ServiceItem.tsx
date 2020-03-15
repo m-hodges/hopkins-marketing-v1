@@ -3,9 +3,9 @@ import { Service } from "../types";
 import useObserver from "../hooks/useObserver";
 
 const ServiceItem = (props: Service) => {
-  const reference = props.id.toString();
+  const reference = `_${props.id}Reference`;
   const Icon = props.icon;
-  // const { isContentVisible } = useObserver(reference);
+  const { isContentVisible } = useObserver(reference);
   return (
     <div className="service">
       <div className="service--heading">
@@ -14,9 +14,9 @@ const ServiceItem = (props: Service) => {
       </div>
 
       <ul
-        // className={`${
-        //   isContentVisible ? "fade-in fade-in--visible" : "fade-in"
-        // }`}
+        className={`${
+          isContentVisible ? "fade-in fade-in--visible" : "fade-in"
+        }`}
         id={reference}
       >
         {props.details.map((detail, i) => (

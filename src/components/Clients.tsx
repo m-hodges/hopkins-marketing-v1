@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { clients } from "../data";
 import { Client as ClientType } from "../types";
 import useObserver from "../hooks/useObserver";
+import { FaCircle } from "react-icons/fa";
+import classnames from "classnames";
 
 const Clients = () => {
   const [index, setIndex] = useState(0);
   const { isHrVisible } = useObserver("clientsReference");
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (index < clients.length - 1) {
+        setIndex(index + 1);
+      } else {
+        setIndex(0);
+      }
+    }, 10000);
+    return () => clearInterval(timer);
+  }, [index]);
 
   return (
     <div className="clients container--centered__col">
@@ -18,16 +31,25 @@ const Clients = () => {
         />
       </h2>
       <div className="clients--container" id="clientsReference">
-        {clients.map(client => (
-          <Client client={client} key={client.id} />
-        ))}
+        <Client client={clients[index]} key={clients[index].id} />
+        <div className="clients--icon__container">
+          {clients.map((client, i) => (
+            <FaCircle
+              size={20}
+              className={classnames("clients--icon", {
+                "clients--icon__active": index === i
+              })}
+              onClick={() => setIndex(i)}
+              key={i}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 //include circles (with hover purple) over image, on click nav to that client
-//timeout to go to next client in loop
 //fade to the side on switch
 
 const Client = ({ client }: { client: ClientType }) => {

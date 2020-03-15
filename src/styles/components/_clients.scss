@@ -9,13 +9,13 @@
   &--icon {
     cursor: pointer;
     color: $secondary-brand-color;
-    transition: color 0.5s ease-in;
     margin: 5px;
     &__active {
       color: $primary-brand-color;
     }
     &:hover {
       color: $primary-brand-color;
+      transition: color 0.5s ease-in;
     }
     &__container {
       position: absolute;

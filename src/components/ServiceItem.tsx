@@ -8,8 +8,10 @@ const ServiceItem = (props: Service) => {
   // const { isContentVisible } = useObserver(reference);
   return (
     <div className="service">
-      <Icon size={50} className="service--icon" />
-      <h3 className="service--title">{props.title.toUpperCase()}</h3>
+      <div className="service--heading">
+        <Icon size={50} className="service--icon" />
+        <h3 className="service--title">{props.title.toUpperCase()}</h3>
+      </div>
 
       <ul
         // className={`${

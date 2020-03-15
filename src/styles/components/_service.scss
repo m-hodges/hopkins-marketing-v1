@@ -7,6 +7,9 @@
   color: white;
   @include centerFlexContainer(column);
   text-align: center;
+  &--heading {
+    cursor: pointer;
+  }
   &--icon {
     color: white;
     transition: color 0.5s linear;

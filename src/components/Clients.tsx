@@ -65,7 +65,8 @@ const Client = ({ client }: { client: ClientType }) => {
             paddingTop: "10px",
             paddingRight: "20px",
             paddingBottom: "10px",
-            paddingLeft: "10px"
+            paddingLeft: "10px",
+            overflowY: "auto"
           }}
         >{`\"${client.testimonial}\"`}</p>
       </div>

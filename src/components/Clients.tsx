@@ -49,13 +49,34 @@ const Clients = () => {
   );
 };
 
-//include circles (with hover purple) over image, on click nav to that client
-//fade to the side on switch
-
 const Client = ({ client }: { client: ClientType }) => {
+  const [onMount, setMount] = useState(false);
+  const [onUnmount, setUnmount] = useState(false);
+
+  useEffect(() => {
+    const onMountTimer = setTimeout(() => {
+      console.log("mount");
+      setMount(true);
+    }, 250);
+    const onUnmountTimer = setTimeout(() => {
+      console.log("unmount");
+      setUnmount(true);
+    }, 8500);
+    return () => {
+      clearTimeout(onMountTimer);
+      clearTimeout(onUnmountTimer);
+    };
+  }, []);
+
   return (
-    <div className="client">
-      <div className="client--content">
+    <div
+      className={classnames("client", {
+        "fade-in--from-side__visible": onMount,
+        "fade-out--from-side__invisible": onUnmount,
+        "fade-in--from-side": !onUnmount
+      })}
+    >
+      <div className={"client--content"}>
         <div>
           <p style={{ padding: "10px 20px" }}>{client.name}</p>
           <p style={{ padding: "10px 20px" }}>{client.website}</p>

@@ -55,11 +55,9 @@ const Client = ({ client }: { client: ClientType }) => {
 
   useEffect(() => {
     const onMountTimer = setTimeout(() => {
-      console.log("mount");
       setMount(true);
-    }, 250);
+    }, 100);
     const onUnmountTimer = setTimeout(() => {
-      console.log("unmount");
       setUnmount(true);
     }, 8500);
     return () => {

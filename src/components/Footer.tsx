@@ -43,7 +43,6 @@ const Footer = () => {
               <FaInstagram size={24} className="footer--icon" />
             </a>
           </div>
-          <p>Contact Details:</p>
           <p>Ph: 027312313123</p>
           <p>Email: hopkinsmarketing@gmail.com</p>
         </div>

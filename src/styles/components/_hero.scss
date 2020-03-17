@@ -1,26 +1,27 @@
 .hero {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    top: -75px;
-    z-index: -1;
-    &--background {
-        background-image: url('/images/hunters-race-MYbhN8KaaEc-unsplash.jpg');
-        filter: brightness(50%) contrast(95%);
-        background-size: cover;
-        z-index: -2;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  // top: -75px;
+  z-index: -1;
+  &--background {
+    background-image: url("/images/hunters-race-MYbhN8KaaEc-unsplash.jpg");
+    filter: brightness(50%) contrast(95%);
+    background-size: cover;
+    z-index: -2;
+  }
+  &--logo {
+    height: 25%;
+    &__container {
+      @include centerFlexContainer(column);
+      height: 100%;
+      width: 100%;
     }
-    &--logo {
-        height: 25%;
-        &__container {
-            @include centerFlexContainer (column);
-            height: 100%;
-            width: 100%;
-        }
-    }
-    &--title {
-        margin: 0px;
-        font-size: 85px;
-        color: white;
-    }
+  }
+  &--title {
+    margin: 0px;
+    font-size: 85px;
+    color: white;
+  }
 }

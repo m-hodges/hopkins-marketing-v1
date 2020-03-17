@@ -2,11 +2,12 @@ import React from "react";
 import useObserver from "../hooks/useObserver";
 
 const About = () => {
-  const { isHrVisible, isContentVisible } = useObserver("aboutReference");
+  const { isHrVisible } = useObserver("aboutTitleReference");
+  const { isContentVisible } = useObserver("aboutReference");
   return (
     <div className="about container--centered__col">
       <div className="background about--background"></div>
-      <h2>
+      <h2 id="aboutTitleReference">
         Lorem Ipsum
         <hr
           className={`scroll-in-hr ${

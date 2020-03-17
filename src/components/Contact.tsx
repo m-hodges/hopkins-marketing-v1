@@ -1,7 +1,9 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import useObserver from "../hooks/useObserver";
 import { FormData } from "../types";
 import { sendEmail } from "../api";
+import { CircularProgress } from "@material-ui/core";
+import classnames from "classnames";
 
 const setName = "SET_NAME";
 const setEmail = "SET_EMAIL";
@@ -25,6 +27,8 @@ const reducer = (state: FormData, action: any) => {
 
 const Contact = () => {
   const { isHrVisible } = useObserver("contactReference");
+  const [sendContent, setSendContent] = useState("Send");
+  const [awaitingResponse, setAwaitingResponse] = useState(false);
   const [state, dispatch] = useReducer(reducer, {
     name: "",
     email: "",
@@ -33,36 +37,52 @@ const Contact = () => {
   });
 
   const nameInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (sendContent === "Please try again") {
+      setSendContent("Send");
+    }
     dispatch({ type: setName, payload: event.target.value });
   };
 
   const emailInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (sendContent === "Please try again") {
+      setSendContent("Send");
+    }
     dispatch({ type: setEmail, payload: event.target.value });
   };
 
   const phoneInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (sendContent === "Please try again") {
+      setSendContent("Send");
+    }
     dispatch({ type: setPhone, payload: event.target.value });
   };
 
   const messageInputHandler = (
     event: React.ChangeEvent<HTMLTextAreaElement>
   ) => {
+    if (sendContent === "Please try again") {
+      setSendContent("Send");
+    }
     dispatch({ type: setMessage, payload: event.target.value });
   };
 
   const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendEmail(state).then((response: any) =>
-      console.log("Response: ", response)
-    );
+    setAwaitingResponse(true);
+    try {
+      sendEmail(state).then((response: any) => {
+        setAwaitingResponse(false);
+        setSendContent("Success!");
+      });
+    } catch (error) {
+      setSendContent("Please try again");
+    }
   };
-
-  //await response, display success or failure to the user if response successful or failure
 
   return (
     <div className="contact">
       <div className="background contact--background"></div>
-      <h2>
+      <h2 id="contactReference">
         Contact Us Now!
         <hr
           className={`scroll-in-hr ${
@@ -70,7 +90,7 @@ const Contact = () => {
           }`}
         />
       </h2>
-      <div id="contactReference" className="contact--form">
+      <div className="contact--form">
         <form onSubmit={submitHandler}>
           <div className="contact--form__item">
             <p className="contact--form__label">Name</p>
@@ -118,8 +138,18 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="contact--form__item contact--form__button">
-            <button type="submit" className="contact--button">
-              Send
+            <button
+              type="submit"
+              className={classnames("contact--button", {
+                "contact--button__disabled": sendContent === "Success!"
+              })}
+              disabled={sendContent === "Success!"}
+            >
+              {awaitingResponse ? (
+                <CircularProgress size={28} style={{ color: "white" }} />
+              ) : (
+                sendContent
+              )}
             </button>
           </div>
         </form>

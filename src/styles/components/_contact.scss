@@ -44,10 +44,18 @@
     height: 50px;
     width: 200px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.5s ease-in-out;
     &:hover {
       background-color: $primary-brand-color;
+    }
+    &__disabled {
+      background-color: $primary-brand-color;
+      opacity: 0.75;
+      cursor: default;
     }
   }
 }

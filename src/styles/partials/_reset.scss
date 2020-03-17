@@ -25,3 +25,15 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+input {
+  border: 2px solid $secondary-font-color;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+textarea {
+  border: 2px solid $secondary-font-color;
+  border-radius: 5px;
+  padding: 10px;
+}

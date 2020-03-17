@@ -42,7 +42,7 @@ const mailToClient = (name, email, phone, message) =>
           }
         ],
         Subject: "New enquiry received",
-        HTMLPart: `<h3>Thank you for your enquiry.</h3><br /><p>We will get back to you as soon as possible.</p>`
+        HTMLPart: `<h3>Thank you for your enquiry.</h3><br /><p>We will get back to you as soon as possible.</p><br /><img src="/images/HMG-Logo-Web.png" />`
       }
     ]
   });

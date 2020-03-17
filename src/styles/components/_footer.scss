@@ -22,7 +22,8 @@
       align-items: center;
     }
     & p {
-      margin: 0px;
+      margin: 5px;
+      font-size: 22px;
       color: $secondary-brand-color;
     }
   }
@@ -31,6 +32,9 @@
     transition: color 0.5s ease-in-out;
     &:hover {
       color: $primary-brand-color;
+    }
+    &__container {
+      margin: 5px;
     }
   }
   &--image {

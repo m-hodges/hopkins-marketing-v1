@@ -32,7 +32,7 @@
 
 .scroll-in-hr {
   display: inline-block;
-  color: $primary-brand-color;
+  border: 1px solid $primary-brand-color;
   margin-bottom: 20px;
   transition: width 1.2s ease-out;
   &__visible {

@@ -14,33 +14,33 @@ const Footer = () => {
           />
         </div>
         <div className="footer--column">
-          <div>
+          <div className="footer--link__container">
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="footer--link"
-              style={{ paddingRight: "5px" }}
+              style={{ paddingRight: "10px" }}
             >
-              <FaFacebookSquare size={24} className="footer--icon" />
+              <FaFacebookSquare size={22} className="footer--icon" />
             </a>
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="footer--link"
-              style={{ padding: "0px 5px" }}
+              style={{ padding: "0px 10px" }}
             >
-              <FaTwitter size={24} className="footer--icon" />
+              <FaTwitter size={22} className="footer--icon" />
             </a>
             <a
               href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="footer--link"
-              style={{ paddingLeft: "5px" }}
+              style={{ paddingLeft: "10px" }}
             >
-              <FaInstagram size={24} className="footer--icon" />
+              <FaInstagram size={22} className="footer--icon" />
             </a>
           </div>
           <p>Ph: 027312313123</p>

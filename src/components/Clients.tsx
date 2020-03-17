@@ -22,7 +22,7 @@ const Clients = () => {
 
   return (
     <div className="clients container--centered__col">
-      <h2>
+      <h2 id="clientsReference">
         Our Clients
         <hr
           className={`scroll-in-hr ${
@@ -30,7 +30,7 @@ const Clients = () => {
           }`}
         />
       </h2>
-      <div className="clients--container" id="clientsReference">
+      <div className="clients--container">
         <Client client={clients[index]} key={clients[index].id} />
         <div className="clients--icon__container">
           {clients.map((client, i) => (

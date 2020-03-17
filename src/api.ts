@@ -6,6 +6,7 @@ export const sendEmail = (formData: FormData) => {
     .post("http://localhost:8080/email")
     .send({ formData })
     .then(response => {
+      console.log("Response received: ", response);
       return response;
     })
     .catch(error => {

@@ -69,20 +69,22 @@ router.post("/email", (req, res) => {
     mailToSelf(name, email, phone, message)
       .then(result => {
         console.log("Success: ", result.body);
-        res.json({ result });
       })
       .then(() => {
         try {
           mailToClient(name, email, phone, message).then(result => {
             console.log("Bounce Email Success: ", result.body);
             res.json({ result });
+            return;
           });
         } catch (error) {
           console.log("Bounce Error: ", err.statusCode);
+          res.json({ error });
         }
       });
   } catch (error) {
     console.log("Error: ", err.statusCode);
+    res.json({ error });
   }
 });
 

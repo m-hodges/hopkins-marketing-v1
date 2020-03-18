@@ -71,8 +71,12 @@ const Contact = () => {
     setAwaitingResponse(true);
     try {
       sendEmail(state).then((response: any) => {
-        setAwaitingResponse(false);
-        setSendContent("Success!");
+        if (response.statusCode === 200) {
+          setAwaitingResponse(false);
+          setSendContent("Success!");
+        } else {
+          setSendContent("Please try again");
+        }
       });
     } catch (error) {
       setSendContent("Please try again");

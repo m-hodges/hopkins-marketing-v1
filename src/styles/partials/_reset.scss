@@ -1,7 +1,13 @@
+html {
+  scrollbar-width: thin;
+  scrollbar-color: $alternative-background-color $secondary-brand-color;
+}
+
 body {
   margin: 0px;
   overflow-x: hidden;
   position: relative;
+
   &:before {
     content: "";
     position: absolute;
@@ -11,6 +17,18 @@ body {
     background-image: url("/images/funky-lines.png");
     opacity: 0.4;
     z-index: -1;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $secondary-brand-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-brand-color;
+    &:active {
+      background-color: $alternative-brand-color;
+    }
   }
 }
 

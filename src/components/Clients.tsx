@@ -59,7 +59,7 @@ const Client = ({ client }: { client: ClientType }) => {
     }, 100);
     const onUnmountTimer = setTimeout(() => {
       setUnmount(true);
-    }, 8500);
+    }, 9000);
     return () => {
       clearTimeout(onMountTimer);
       clearTimeout(onUnmountTimer);

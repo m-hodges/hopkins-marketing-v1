@@ -75,10 +75,12 @@ const Contact = () => {
           setAwaitingResponse(false);
           setSendContent("Success!");
         } else {
+          setAwaitingResponse(false);
           setSendContent("Please try again");
         }
       });
     } catch (error) {
+      setAwaitingResponse(false);
       setSendContent("Please try again");
     }
   };

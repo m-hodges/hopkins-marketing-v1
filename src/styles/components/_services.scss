@@ -17,3 +17,9 @@
     @include centerFlexContainer(row);
   }
 }
+
+@media (max-width: 1000px) {
+  .services {
+    padding: 50px;
+  }
+}

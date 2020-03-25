@@ -66,3 +66,66 @@
     border-bottom: 2px solid $secondary-font-color;
   }
 }
+
+@media (max-width: 1000px) {
+  .clients {
+    &--icon {
+      &__container {
+        width: 60%;
+      }
+    }
+  }
+  .client {
+    width: 500px;
+    height: 500px;
+    flex-direction: column;
+    &--content {
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-left: 2px solid $secondary-font-color;
+      border-right: 2px solid $secondary-font-color;
+      border-top: 2px solid $secondary-font-color;
+      border-bottom: none;
+    }
+    &--image {
+      width: 100%;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-right: 2px solid $secondary-font-color;
+      border-left: 2px solid $secondary-font-color;
+      border-top: none;
+      border-bottom: 2px solid $secondary-font-color;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .clients {
+    &--icon {
+      &__container {
+        height: 95%;
+      }
+    }
+  }
+  .client {
+    width: 400px;
+    height: 800px;
+  }
+}
+
+@media (max-width: 500px) {
+  .client {
+    width: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .client {
+    width: 300px;
+  }
+}

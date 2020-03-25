@@ -25,3 +25,22 @@
     color: white;
   }
 }
+
+@media (max-width: 1000px) {
+  .hero {
+    &--background {
+      background-position: center;
+    }
+    &--logo {
+      height: 20%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    &--logo {
+      height: 15%;
+    }
+  }
+}

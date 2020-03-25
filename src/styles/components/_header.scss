@@ -52,3 +52,16 @@
   border-bottom: 1px $primary-brand-color solid;
   color: $primary-brand-color;
 }
+
+//tablet breakpoints
+@media (max-width: 1000px) {
+  .header {
+    &--linkContainer {
+      padding-right: 2vw;
+    }
+  }
+}
+
+//mobile breakpoints
+@media (max-width: 500px) {
+}

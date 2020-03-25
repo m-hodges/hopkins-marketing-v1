@@ -87,9 +87,9 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <div className="background contact--background"></div>
-      <h2 id="contactReference">
-        Contact Us Now!
+      <div className="background"></div>
+      <h2 className="heading" id="contactReference">
+        Contact Us
         <hr
           className={`scroll-in-hr ${
             isHrVisible ? "scroll-in-hr__visible" : "scroll-in-hr__not-visible"

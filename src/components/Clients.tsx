@@ -22,7 +22,7 @@ const Clients = () => {
 
   return (
     <div className="clients container--centered__col">
-      <h2 id="clientsReference">
+      <h2 className="heading" id="clientsReference">
         Our Clients
         <hr
           className={`scroll-in-hr ${

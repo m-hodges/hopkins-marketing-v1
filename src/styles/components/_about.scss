@@ -2,14 +2,27 @@
   text-align: center;
   position: relative;
   padding: 50px;
-  &--background {
-    /* Background pattern from Toptal Subtle Patterns */
-    // background: url('/images/funky-lines.png');
-    // background-repeat: repeat;
-    // opacity: 0.6;
-  }
   &--content {
     margin: 20px 100px;
     max-width: 75%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about {
+    &--content {
+      margin: 20px 50px;
+      max-width: 90%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    &--content {
+      margin: 20px 0px;
+      max-width: 100%;
+      font-size: 20px;
+    }
   }
 }

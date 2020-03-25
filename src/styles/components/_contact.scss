@@ -3,12 +3,6 @@
   @include centerFlexContainer(column);
   padding: 50px;
   text-align: center;
-  &--background {
-    /* Background pattern from Toptal Subtle Patterns */
-    // background: url('/images/funky-lines.png');
-    // background-repeat: repeat;
-    // opacity: 0.6;
-  }
   &--form {
     margin: 20px;
     &__item {
@@ -56,6 +50,45 @@
       background-color: $primary-brand-color;
       opacity: 0.75;
       cursor: default;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact {
+    &--form {
+      &__input {
+        width: 500px;
+      }
+      &__text-area {
+        width: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact {
+    &--form {
+      &__input {
+        width: 400px;
+      }
+      &__text-area {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .contact {
+    &--form {
+      &__input {
+        width: 300px;
+      }
+      &__text-area {
+        width: 300px;
+      }
     }
   }
 }

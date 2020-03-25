@@ -1,61 +1,78 @@
 @mixin mainFont {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    @include mainFont;
+  @include mainFont;
 }
 
 h1 {
-    color: $primary-brand-color;
-    font-size: 72px;
-    margin: 0px;
+  color: $primary-brand-color;
+  font-size: 72px;
+  margin: 0px;
 }
 
 h2 {
-    color: $primary-font-color;
-    font-size: 64px;
-    margin: 0px;
+  color: $primary-font-color;
+  font-size: 64px;
+  margin: 0px;
 }
 
 h3 {
-    color: $alternative-font-color;
-    font-size: 28px;
+  color: $alternative-font-color;
+  font-size: 28px;
 }
 
 p {
-    color: $secondary-font-color;
-    font-size: 24px;
-    margin: 0px;
+  color: $secondary-font-color;
+  font-size: 24px;
+  margin: 0px;
 }
 
 input {
-    color: $secondary-font-color;
-    font-size: 24px;
-    margin: 0px;
-    @include mainFont;
+  color: $secondary-font-color;
+  font-size: 24px;
+  margin: 0px;
+  @include mainFont;
 }
 
 textarea {
-    color: $secondary-font-color;
-    font-size: 18px;
-    margin: 0px;
-    @include mainFont;
+  color: $secondary-font-color;
+  font-size: 18px;
+  margin: 0px;
+  @include mainFont;
 }
 
 li {
-    margin: 10px;
+  margin: 10px;
 }
 
 .heading {
-    color: $primary-brand-color;
-    font-size: 72px;
-    margin: 0px;
+  color: $primary-font-color;
+  font-size: 72px;
+  margin: 0px;
 }
 
 .alt-heading {
-    color: $secondary-brand-color;
-    font-size: 72px;
-    margin: 0px;
+  color: $secondary-brand-color;
+  font-size: 72px;
+  margin: 0px;
 }
 
+@media (max-width: 1000px) {
+  .heading {
+    font-size: 56px;
+  }
+  .alt-heading {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 46px;
+  }
+  .alt-heading {
+    font-size: 46px;
+  }
+}

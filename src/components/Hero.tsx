@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import useWindowSize from "../hooks/useWindowSize";
 
 type Props = {
   setHeaderVisibility: (arg: boolean) => void;
 };
 
 const Hero = ({ setHeaderVisibility }: Props) => {
+  const [width, height] = useWindowSize();
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -19,6 +21,7 @@ const Hero = ({ setHeaderVisibility }: Props) => {
     observer.observe(target);
     return () => observer.unobserve(target);
   }, []);
+
   return (
     <>
       <div className="hero container--centered" id="headerReference">
@@ -35,7 +38,7 @@ const Hero = ({ setHeaderVisibility }: Props) => {
         style={{
           position: "relative",
           zIndex: -999,
-          height: `${document.documentElement.clientHeight - 75}px`
+          height: `${height - 75}px`
         }}
       ></div>
     </>

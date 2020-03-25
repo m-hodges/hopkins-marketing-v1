@@ -6,9 +6,9 @@ const About = () => {
   const { isContentVisible } = useObserver("aboutReference");
   return (
     <div className="about container--centered__col">
-      <div className="background about--background"></div>
-      <h2 id="aboutTitleReference">
-        Lorem Ipsum
+      <div className="background"></div>
+      <h2 className="heading" id="aboutTitleReference">
+        About
         <hr
           className={`scroll-in-hr ${
             isHrVisible ? "scroll-in-hr__visible" : "scroll-in-hr__not-visible"

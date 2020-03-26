@@ -81,10 +81,11 @@
     &__active {
       &:before {
         content: "";
-        width: 100%;
-        height: 615px;
+        width: 200px;
+        height: 200vh;
         background-color: $alternative-background-color;
         opacity: 0.95;
+        overflow: hidden;
       }
     }
     &--burger {
@@ -102,14 +103,13 @@
     }
     &--linkContainer {
       width: 100%;
-      height: 250px;
+      height: 100vh;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-end;
       position: absolute;
       padding-right: 0;
-      top: 75px;
-      padding-bottom: 20px;
+      top: 50px;
     }
     &--link {
       font-size: 26px;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import useWindowSize from "../hooks/useWindowSize";
 import { MdMenu } from "react-icons/md";
@@ -9,8 +9,21 @@ type Props = {
 };
 
 const Header = ({ isHeaderVisible }: Props) => {
-  const [dropdownVisibility, setDropdownVisibility] = useState(false);
   const [width, height] = useWindowSize();
+  const [dropdownVisibility, setDropdownVisibility] = useState(false);
+  const [dropdownAnimation, setDropdownAnimation] = useState(false);
+
+  function clickHandler() {
+    setDropdownVisibility(!dropdownVisibility);
+    if (!dropdownAnimation) {
+      setTimeout(() => {
+        setDropdownAnimation(true);
+      }, 100);
+    } else {
+      setDropdownAnimation(false);
+    }
+  }
+
   return (
     <>
       <div
@@ -24,12 +37,17 @@ const Header = ({ isHeaderVisible }: Props) => {
                 "header--burger",
                 dropdownVisibility && "header--burger__active"
               )}
-              onClick={() => {
-                setDropdownVisibility(!dropdownVisibility);
-              }}
+              onClick={clickHandler}
             />
             {dropdownVisibility && (
-              <NavLinks setDropdownVisibility={setDropdownVisibility} />
+              <div
+                className={classnames(
+                  "dropdown",
+                  dropdownAnimation && "dropdown--visible"
+                )}
+              >
+                <NavLinks setDropdownVisibility={setDropdownVisibility} />
+              </div>
             )}
           </>
         ) : (

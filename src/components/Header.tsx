@@ -9,12 +9,12 @@ type Props = {
 };
 
 const Header = ({ isHeaderVisible }: Props) => {
-  const [dropDownVisibility, setDropdownVisibility] = useState(false);
+  const [dropdownVisibility, setDropdownVisibility] = useState(false);
   const [width, height] = useWindowSize();
   return (
     <>
       <div
-        className={classnames("header", dropDownVisibility && "header__active")}
+        className={classnames("header", dropdownVisibility && "header__active")}
       >
         {width <= 600 ? (
           <>
@@ -22,13 +22,15 @@ const Header = ({ isHeaderVisible }: Props) => {
               size={36}
               className={classnames(
                 "header--burger",
-                dropDownVisibility && "header--burger__active"
+                dropdownVisibility && "header--burger__active"
               )}
               onClick={() => {
-                setDropdownVisibility(!dropDownVisibility);
+                setDropdownVisibility(!dropdownVisibility);
               }}
             />
-            {dropDownVisibility && <NavLinks />}
+            {dropdownVisibility && (
+              <NavLinks setDropdownVisibility={setDropdownVisibility} />
+            )}
           </>
         ) : (
           <>
@@ -59,7 +61,16 @@ const Header = ({ isHeaderVisible }: Props) => {
   );
 };
 
-function NavLinks() {
+type NavLinkProps = {
+  setDropdownVisibility?: (arg: boolean) => void;
+};
+
+function NavLinks({ setDropdownVisibility }: NavLinkProps) {
+  const clickHandler = () => {
+    if (setDropdownVisibility) {
+      setDropdownVisibility(false);
+    }
+  };
   return (
     <div className="header--linkContainer">
       <NavLink
@@ -67,6 +78,7 @@ function NavLinks() {
         exact={true}
         activeClassName="activeNavLink"
         className="header--link"
+        onClick={clickHandler}
       >
         Home
       </NavLink>
@@ -74,6 +86,7 @@ function NavLinks() {
         to="/about"
         activeClassName="activeNavLink"
         className="header--link"
+        onClick={clickHandler}
       >
         About
       </NavLink>
@@ -81,6 +94,7 @@ function NavLinks() {
         to="/services"
         activeClassName="activeNavLink"
         className="header--link"
+        onClick={clickHandler}
       >
         Services
       </NavLink>
@@ -88,6 +102,7 @@ function NavLinks() {
         to="/clients"
         activeClassName="activeNavLink"
         className="header--link"
+        onClick={clickHandler}
       >
         Clients
       </NavLink>
@@ -95,6 +110,7 @@ function NavLinks() {
         to="/contact"
         activeClassName="activeNavLink"
         className="header--link"
+        onClick={clickHandler}
       >
         Contact
       </NavLink>

@@ -114,7 +114,10 @@
   }
   .client {
     width: 400px;
-    height: 800px;
+    height: 600px;
+    &--content {
+      padding-bottom: 15px;
+    }
   }
 }
 

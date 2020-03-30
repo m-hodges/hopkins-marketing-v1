@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import About from "./Mission";
 import useObserver from "../hooks/useObserver";
 import classnames from "classnames";
@@ -13,8 +13,10 @@ type Props = {
 };
 
 function AboutPage({ setHeaderVisibility }: Props) {
-  setHeaderVisibility(true);
   const { isHrVisible } = useObserver("aboutPageTitleReference");
+  useEffect(() => {
+    setHeaderVisibility(true);
+  }, []);
   return (
     <div className="about--page">
       <h2
@@ -67,7 +69,7 @@ function AboutPageItem({ orientation, content, imageUrl }: AboutPageItemProps) {
     >
       {orientation % 2 !== 0 && (
         <div className="about--page__content about--page__content--right-aligned">
-          <p style={{ fontSize: "30px" }}>{content}</p>
+          <p>{content}</p>
         </div>
       )}
       <div className="about--page__image--container">
@@ -76,7 +78,7 @@ function AboutPageItem({ orientation, content, imageUrl }: AboutPageItemProps) {
 
       {orientation % 2 === 0 && (
         <div className="about--page__content about--page__content--left-aligned">
-          <p style={{ fontSize: "30px" }}>{content}</p>
+          <p>{content}</p>
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Contact from "./Contact";
 
 type Props = {
@@ -6,7 +6,9 @@ type Props = {
 };
 
 function ContactPage({ setHeaderVisibility }: Props) {
-  setHeaderVisibility(true);
+  useEffect(() => {
+    setHeaderVisibility(true);
+  }, []);
   return <Contact />;
 }
 

@@ -14,6 +14,7 @@ const Header = ({ isHeaderVisible }: Props) => {
   const [dropdownAnimation, setDropdownAnimation] = useState(false);
 
   function clickHandler() {
+    console.log(dropdownAnimation);
     setDropdownVisibility(!dropdownVisibility);
     if (!dropdownAnimation) {
       setTimeout(() => {
@@ -46,7 +47,10 @@ const Header = ({ isHeaderVisible }: Props) => {
                   dropdownAnimation && "dropdown--visible"
                 )}
               >
-                <NavLinks setDropdownVisibility={setDropdownVisibility} />
+                <NavLinks
+                  setDropdownVisibility={setDropdownVisibility}
+                  setDropdownAnimation={setDropdownAnimation}
+                />
               </div>
             )}
           </>
@@ -81,12 +85,19 @@ const Header = ({ isHeaderVisible }: Props) => {
 
 type NavLinkProps = {
   setDropdownVisibility?: (arg: boolean) => void;
+  setDropdownAnimation?: (arg: boolean) => void;
 };
 
-function NavLinks({ setDropdownVisibility }: NavLinkProps) {
+function NavLinks({
+  setDropdownVisibility,
+  setDropdownAnimation
+}: NavLinkProps) {
   const clickHandler = () => {
     if (setDropdownVisibility) {
       setDropdownVisibility(false);
+    }
+    if (setDropdownAnimation) {
+      setDropdownAnimation(false);
     }
   };
   return (

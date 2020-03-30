@@ -3,12 +3,10 @@ import { hot } from "react-hot-loader";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Header from "./Header";
-import Clients from "./Clients";
-import Contact from "./Contact";
 import Footer from "./Footer";
 import MainPage from "./MainPage";
-import ServiceList from "./ServiceList";
 import AboutPage from "./AboutPage";
+import ContactPage from "./ContactPage";
 
 const App = () => {
   const [isHeaderVisible, setHeaderVisibility] = useState<boolean>(false);
@@ -18,16 +16,10 @@ const App = () => {
         <Header isHeaderVisible={isHeaderVisible} />
         <Switch>
           <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/clients">
-            <Clients />
-          </Route>
-          <Route path="/services">
-            <ServiceList />
+            <ContactPage setHeaderVisibility={setHeaderVisibility} />
           </Route>
           <Route path="/about">
-            <AboutPage />
+            <AboutPage setHeaderVisibility={setHeaderVisibility} />
           </Route>
           <Route exact path="/">
             <MainPage setHeaderVisibility={setHeaderVisibility} />

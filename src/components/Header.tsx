@@ -67,7 +67,7 @@ const Header = ({ isHeaderVisible }: Props) => {
                     alt="Hopkins Marketing Group"
                     className="header--brand__logo"
                   />
-                  <span>Hopkins Marketing Group</span>
+                  <span className="header--link">Hopkins Marketing Group</span>
                 </a>
               </>
             )}
@@ -107,22 +107,6 @@ function NavLinks({ setDropdownVisibility }: NavLinkProps) {
         onClick={clickHandler}
       >
         About
-      </NavLink>
-      <NavLink
-        to="/services"
-        activeClassName="activeNavLink"
-        className="header--link"
-        onClick={clickHandler}
-      >
-        Services
-      </NavLink>
-      <NavLink
-        to="/clients"
-        activeClassName="activeNavLink"
-        className="header--link"
-        onClick={clickHandler}
-      >
-        Clients
       </NavLink>
       <NavLink
         to="/contact"

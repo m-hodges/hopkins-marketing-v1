@@ -44,3 +44,11 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .hero {
+    &--logo {
+      height: 12.5%;
+    }
+  }
+}

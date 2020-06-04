@@ -31,6 +31,12 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  section {
+    overflow: hidden;
+  }
+}
+
 a {
   text-decoration: none;
   &:hover {

@@ -17,6 +17,9 @@
 
 @media (max-width: 1000px) {
   .about {
+    &--container {
+      max-width: 90%;
+    }
     &--content {
       margin: 20px 50px;
       max-width: 90%;
@@ -26,6 +29,9 @@
 
 @media (max-width: 500px) {
   .about {
+    &--container {
+      max-width: 100%;
+    }
     &--content {
       margin: 20px 0px;
       max-width: 100%;

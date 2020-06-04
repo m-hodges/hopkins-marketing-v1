@@ -5,7 +5,7 @@ import classnames from "classnames";
 
 const content = [
   "Hopkins Marketing Group was created to simplify the marketing experince for the individual, created out Director Elliot Hopkins' initial love of Moving Image.",
-  "Add more details the the story here, as well as more picture cards if more details are required",
+  "Add more details to the story here, as well as more picture cards if more details are required",
 ];
 
 type Props = {

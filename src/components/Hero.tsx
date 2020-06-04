@@ -8,8 +8,8 @@ type Props = {
 const Hero = ({ setHeaderVisibility }: Props) => {
   const [width, height] = useWindowSize();
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.intersectionRatio === 0) {
           setHeaderVisibility(true);
         } else {
@@ -38,7 +38,13 @@ const Hero = ({ setHeaderVisibility }: Props) => {
         style={{
           position: "relative",
           zIndex: -999,
-          height: `${height - 75}px`
+          height: (() => {
+            if (width > 600) {
+              return `${height - 75}px`;
+            } else {
+              return `${height}px`;
+            }
+          })(),
         }}
       ></div>
     </>

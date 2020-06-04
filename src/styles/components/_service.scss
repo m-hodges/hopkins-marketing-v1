@@ -7,9 +7,9 @@
   color: white;
   @include centerFlexContainer(column);
   text-align: center;
-  &--heading {
-    cursor: pointer;
-  }
+  // &--heading {
+  //   cursor: pointer;
+  // }
   &--icon {
     color: white;
     transition: color 0.5s linear;
@@ -18,12 +18,12 @@
     color: white;
     transition: color 0.5s linear;
   }
-  &:hover .service--title {
-    color: $primary-brand-color;
-  }
-  &:hover .service--icon {
-    color: $primary-brand-color;
-  }
+  // &:hover .service--title {
+  //   color: $primary-brand-color;
+  // }
+  // &:hover .service--icon {
+  //   color: $primary-brand-color;
+  // }
 }
 
 @media (max-width: 900px) {

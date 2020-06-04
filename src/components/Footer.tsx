@@ -47,13 +47,13 @@ const Footer = () => {
           <p>Email: hopkinsmarketing@gmail.com</p>
         </div>
       </div>
-      <div className="footer--row__sub">
+      {/* <div className="footer--row__sub">
         <div className="footer--column footer--column__centered">
           <span className="border-top">
             Copyright © 2020 Hopkins Marketing Group | All Rights Reserved.
           </span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

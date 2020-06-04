@@ -15,21 +15,26 @@ const Mission = () => {
           }`}
         />
       </h2>
-      <p
-        className={`about--content ${
+      <div
+        className={`about--container ${
           isContentVisible ? "fade-in fade-in--visible" : "fade-in"
         }`}
         id="aboutReference"
       >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet
-        lectus dapibus tristique volutpat. Maecenas pretium ipsum non
-        ullamcorper elementum. Duis eu iaculis metus. Pellentesque at ligula
-        euismod, feugiat nisi in, sollicitudin turpis. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Mauris aliquet lectus dapibus
-        tristique volutpat. Maecenas pretium ipsum non ullamcorper elementum.
-        Duis eu iaculis metus. Pellentesque at ligula euismod, feugiat nisi in,
-        sollicitudin turpis.
-      </p>
+        <p className={"about--content"}>
+          We are passionate about using multimedia and social media, to platform
+          ones ideas and artistries out to the public
+        </p>
+        <p className={"about--content"}>
+          We strive to deliver optimal results for all of your marketing needs
+          at an affordable budget.
+        </p>
+        <p className={"about--content"}>
+          We pride ourselves on our ability to effectively communicate,
+          construct and develop your intended message bringing it to the wider
+          target audience for an even greater public understanding.
+        </p>
+      </div>
     </div>
   );
 };

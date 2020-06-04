@@ -37,7 +37,7 @@ const Clients = () => {
             <FaCircle
               size={20}
               className={classnames("clients--icon", {
-                "clients--icon__active": index === i
+                "clients--icon__active": index === i,
               })}
               onClick={() => setIndex(i)}
               key={i}
@@ -71,12 +71,12 @@ const Client = ({ client }: { client: ClientType }) => {
       className={classnames("client", {
         "fade-in--from-side__visible": onMount,
         "fade-out--from-side__invisible": onUnmount,
-        "fade-in--from-side": !onUnmount
+        "fade-in--from-side": !onUnmount,
       })}
     >
       <div className={"client--content"}>
         <div>
-          <p style={{ padding: "10px 20px" }}>{client.name}</p>
+          <p style={{ padding: "10px 20px" }}>{client.businessName}</p>
           <p style={{ padding: "10px 20px" }}>{client.website}</p>
         </div>
         <p
@@ -85,7 +85,7 @@ const Client = ({ client }: { client: ClientType }) => {
             paddingRight: "20px",
             paddingBottom: "10px",
             paddingLeft: "10px",
-            overflowY: "auto"
+            overflowY: "auto",
           }}
         >{`\"${client.testimonial}\"`}</p>
       </div>
@@ -93,7 +93,7 @@ const Client = ({ client }: { client: ClientType }) => {
         className="client--image"
         style={{
           backgroundImage: `url(${client.image})`,
-          backgroundPosition: "center"
+          backgroundPosition: "center",
         }}
       ></div>
     </div>

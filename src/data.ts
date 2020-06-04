@@ -1,88 +1,51 @@
 import { Service, Client } from "./types";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdPhotoCamera, MdVideocam, MdWebAsset } from "react-icons/md";
+import { BsPeopleFill } from "react-icons/bs";
 
 export const services: Service[] = [
   {
     id: 1,
-    title: "Service Name",
-    details: [
-      "Input keywords here",
-      "Input keywords here",
-      "Input keywords here"
-    ],
-    icon: MdEmail
+    title: "Media Management",
+    details: ["Social Media", "Multimedia"],
+    icon: BsPeopleFill,
   },
   {
     id: 2,
-    title: "Service Name",
-    details: [
-      "Input keywords here",
-      "Input keywords here",
-      "Input keywords here"
-    ],
-    icon: MdEmail
+    title: "Photography",
+    details: ["Weddings", "Graduations"],
+    icon: MdPhotoCamera,
   },
   {
     id: 3,
-    title: "Service Name",
-    details: [
-      "Input keywords here",
-      "Input keywords here",
-      "Input keywords here"
-    ],
-    icon: MdEmail
+    title: "Videography",
+    details: ["Music Videos", "Live Events", "Filming and Editing"],
+    icon: MdVideocam,
   },
   {
     id: 4,
-    title: "Service Name",
-    details: [
-      "Input keywords here",
-      "Input keywords here",
-      "Input keywords here"
-    ],
-    icon: MdEmail
+    title: "Web",
+    details: ["Websites", "Server Setup", "Hosting"],
+    icon: MdWebAsset,
   },
-  {
-    id: 5,
-    title: "Service Name",
-    details: [
-      "Input keywords here",
-      "Input keywords here",
-      "Input keywords here"
-    ],
-    icon: MdEmail
-  },
-  {
-    id: 6,
-    title: "Service Name",
-    details: [
-      "Input keywords here",
-      "Input keywords here",
-      "Input keywords here"
-    ],
-    icon: MdEmail
-  }
 ];
 
 export const clients: Client[] = [
   {
     id: 1,
-    name: "Michael",
-    businessName: "The Fruit Shop",
+    name: "",
+    businessName: "Plot Collective",
     website: "http://www.example.com",
     image:
       "https://images.unsplash.com/photo-1539666455488-99208279e51e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80",
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in tincidunt mi."
+    testimonial: "Enter a testimonial here",
   },
   {
     id: 2,
-    name: "FirstName LastName",
-    businessName: "The Car Spraypainting Business",
+    name: "",
+    businessName: "Ginger & Honey",
     website: "http://www.example.com",
     image:
-      "https://images.unsplash.com/photo-1561131506-3c48296e2c20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
-    testimonial:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in tincidunt mi. Duis finibus sodales nisl ac congue. Praesent venenatis massa in pharetra molestie."
-  }
+      "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    testimonial: "Enter a testimonial here",
+  },
 ];

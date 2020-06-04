@@ -4,8 +4,8 @@ import useObserver from "../hooks/useObserver";
 import classnames from "classnames";
 
 const content = [
-  " Quisque pharetra sem ante, non aliquam libero porttitor vel. Nulla facilisi. Ut laoreet consectetur hendrerit. Ut accumsan felis vitae hendrerit venenatis. Praesent maximus pulvinar placerat. Nulla facilisi. Donec efficitur posuere consequat. ",
-  " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices, ex vitae laoreet varius, libero lectus imperdiet dolor, vel facilisis nunc justo non nibh. Integer nec vehicula lectus, sed fermentum diam. Nunc congue ac enim egestas ullamcorper. Curabitur bibendum lorem tellus, sed accumsan tortor molestie sed. Curabitur porta dapibus ante vel cursus. "
+  "Hopkins Marketing Group was created to simplify the marketing experince for the individual, created out of the Director Elliot Hopkins initial love of Moving Image",
+  " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultrices, ex vitae laoreet varius, libero lectus imperdiet dolor, vel facilisis nunc justo non nibh. Integer nec vehicula lectus, sed fermentum diam. Nunc congue ac enim egestas ullamcorper. Curabitur bibendum lorem tellus, sed accumsan tortor molestie sed. Curabitur porta dapibus ante vel cursus. ",
 ];
 
 type Props = {

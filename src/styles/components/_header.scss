@@ -82,7 +82,7 @@
     &__active {
       &:before {
         content: "";
-        width: 200px;
+        width: 50%;
         height: 200vh;
         background-color: $alternative-background-color;
         opacity: 0.95;

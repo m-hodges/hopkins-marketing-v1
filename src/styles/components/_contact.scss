@@ -18,6 +18,7 @@
       font-size: 24px;
     }
     &__text-area {
+      min-height: 150px;
       height: 250px;
       width: 750px;
       overflow: auto;

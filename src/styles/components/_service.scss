@@ -6,6 +6,7 @@
   overflow: hidden;
   color: white;
   @include centerFlexContainer(column);
+  justify-content: flex-start;
   text-align: center;
   // &--heading {
   //   cursor: pointer;

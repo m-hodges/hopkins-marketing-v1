@@ -9,26 +9,26 @@ module.exports = {
       {
         test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        use: "ts-loader"
+        use: "ts-loader",
       },
       {
         enforce: "pre",
         test: /\.js$/,
-        loader: "source-map-loader"
+        loader: "source-map-loader",
       },
       {
         test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
-      }
-    ]
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+    ],
   },
   resolve: {
-    extensions: ["*", ".js", ".jsx", ".scss", ".ts", ".tsx"]
+    extensions: ["*", ".js", ".jsx", ".scss", ".ts", ".tsx"],
   },
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",
-    filename: "bundle.js"
+    filename: "bundle.js",
   },
   devServer: {
     historyApiFallback: true,
@@ -38,14 +38,14 @@ module.exports = {
     hotOnly: true,
     proxy: {
       "/api": {
-        target: "http://localhost:8080"
-      }
-    }
+        target: "http://localhost:8080",
+      },
+    },
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin({
-      multiStep: true
-    })
+      multiStep: true,
+    }),
   ],
-  devtool: "cheap-module-source-map"
+  devtool: "cheap-module-source-map",
 };

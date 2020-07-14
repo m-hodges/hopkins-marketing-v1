@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import About from "./Mission";
 import useObserver from "../hooks/useObserver";
 import classnames from "classnames";
+import { useLocation } from "react-router-dom";
 
 const content = [
   "Hopkins Marketing Group was created to simplify the marketing experince for the individual, created out of Director Elliot Hopkins' initial love of Moving Image.",
@@ -14,6 +15,12 @@ type Props = {
 
 function AboutPage({ setHeaderVisibility }: Props) {
   const { isHrVisible } = useObserver("aboutPageTitleReference");
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   useEffect(() => {
     setHeaderVisibility(true);
   }, []);

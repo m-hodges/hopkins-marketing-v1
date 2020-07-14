@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { hot } from "react-hot-loader";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -10,6 +10,7 @@ import ContactPage from "./ContactPage";
 
 const App = () => {
   const [isHeaderVisible, setHeaderVisibility] = useState<boolean>(false);
+
   return (
     <>
       <BrowserRouter>

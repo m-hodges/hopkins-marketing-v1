@@ -7,24 +7,26 @@ const mailjet = require("node-mailjet").connect(
   process.env.MJ_APIKEY_PRIVATE
 );
 
+const marketingEmail = "michaelcshodges@gmail.com";
+
 const mailToSelf = (name, email, phone, message) =>
   mailjet.post("send", { version: "v3.1" }).request({
     Messages: [
       {
         From: {
-          Email: "michaelcshodges@gmail.com",
-          Name: "Hopkins Marketing Group Website"
+          Email: marketingEmail,
+          Name: "Hopkins Marketing Group Website",
         },
         To: [
           {
-            Email: email,
-            Name: "Michael Hodges"
-          }
+            Email: marketingEmail,
+            Name: "Michael Hodges",
+          },
         ],
         Subject: "New enquiry received",
-        HTMLPart: `<h3>New Enquiry Received:</h3> <br /> <ul><li><strong>Name:</strong> ${name}</li><li><strong>Email:</strong> ${email}</li><li><strong>Phone:</strong> ${phone}</li><li><strong>Message:</strong> ${message}</li></ul>`
-      }
-    ]
+        HTMLPart: `<h3>New Enquiry Received:</h3> <br /> <ul><li><strong>Name:</strong> ${name}</li><li><strong>Email:</strong> ${email}</li><li><strong>Phone:</strong> ${phone}</li><li><strong>Message:</strong> ${message}</li></ul>`,
+      },
+    ],
   });
 
 const mailToClient = (name, email, phone, message) =>
@@ -32,22 +34,22 @@ const mailToClient = (name, email, phone, message) =>
     Messages: [
       {
         From: {
-          Email: "michaelcshodges@gmail.com",
-          Name: "Hopkins Marketing Group"
+          Email: marketingEmail,
+          Name: "Hopkins Marketing Group",
         },
         To: [
           {
             Email: email,
-            Name: name
-          }
+            Name: name,
+          },
         ],
         Subject: "New enquiry received",
-        HTMLPart: `<h3>Thank you for your enquiry.</h3><br /><p>We will get back to you as soon as possible.</p><br /><img src="/images/HMG-Logo-Web.png" />`
-      }
-    ]
+        HTMLPart: `<h3>Thank you for your enquiry.</h3><br /><p>We will get back to you as soon as possible.</p><br /><img src="/images/HMG-Logo-Web.png" />`,
+      },
+    ],
   });
 
-const validateEmail = emailString => {
+const validateEmail = (emailString) => {
   const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/gim;
   return regex.test(emailString);
 };
@@ -67,12 +69,12 @@ router.post("/email", (req, res) => {
   }
   try {
     mailToSelf(name, email, phone, message)
-      .then(result => {
+      .then((result) => {
         console.log("Success: ", result.body);
       })
       .then(() => {
         try {
-          mailToClient(name, email, phone, message).then(result => {
+          mailToClient(name, email, phone, message).then((result) => {
             console.log("Bounce Email Success: ", result.body);
             res.json({ result });
             return;

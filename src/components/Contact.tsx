@@ -33,7 +33,7 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
 
   const nameInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,6 +106,7 @@ const Contact = () => {
               name="name"
               required
               onChange={nameInputHandler}
+              disabled={sendContent === "Success!"}
             />
           </div>
           <div className="contact--form__item">
@@ -116,6 +117,7 @@ const Contact = () => {
               name="email"
               required
               onChange={emailInputHandler}
+              disabled={sendContent === "Success!"}
             />
           </div>
           <div className="contact--form__item">
@@ -128,6 +130,7 @@ const Contact = () => {
               title="Number required"
               required
               onChange={phoneInputHandler}
+              disabled={sendContent === "Success!"}
             />
           </div>
           <div className="contact--form__item">
@@ -141,13 +144,14 @@ const Contact = () => {
               placeholder=" Enter your message here"
               required
               onChange={messageInputHandler}
+              disabled={sendContent === "Success!"}
             ></textarea>
           </div>
           <div className="contact--form__item contact--form__button">
             <button
               type="submit"
               className={classnames("contact--button", {
-                "contact--button__disabled": sendContent === "Success!"
+                "contact--button__disabled": sendContent === "Success!",
               })}
               disabled={sendContent === "Success!"}
             >
@@ -158,6 +162,14 @@ const Contact = () => {
               )}
             </button>
           </div>
+          {sendContent === "Success!" && (
+            <div>
+              <h2 className="heading" style={{ fontSize: 24, margin: 16 }}>
+                Thank you for your enquiry! Please look forward to hearing from
+                us soon.
+              </h2>
+            </div>
+          )}
         </form>
       </div>
     </div>

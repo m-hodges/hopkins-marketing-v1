@@ -1,5 +1,10 @@
+@font-face {
+  font-family: Brandon;
+  src: url("/public/fonts/Brandon_reg.ttf");
+}
+
 @mixin mainFont {
-  font-family: "Roboto", sans-serif;
+  font-family: Brandon, "Times New Roman", "Roboto", sans-serif;
 }
 
 body {
